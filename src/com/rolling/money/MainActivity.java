@@ -82,6 +82,16 @@ public class MainActivity extends Activity {
 				case 3:
 					break;
 					
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					Intent intent_cal = new Intent();
+					intent_cal.setClass(MainActivity.this, CalculatorActivity.class);
+					startActivity(intent_cal);
+					break;
+					
 				
 				}
 			}

@@ -38,6 +38,10 @@
             android:name="com.rolling.money.PersonInfoActivity"
             android:label="@string/title_activity_person_info" >
         </activity>
+        <activity
+            android:name="com.rolling.money.CalculatorActivity"
+            android:label="@string/title_activity_calculator" >
+        </activity>
     </application>
 
 </manifest>
