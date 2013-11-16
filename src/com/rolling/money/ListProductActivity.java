@@ -31,7 +31,7 @@ public class ListProductActivity extends Activity {
 		for(int i=0;i<items.length;i++)
 		{
 			HashMap<String,Object> map = new HashMap<String,Object>();
-			map.put("ItemImage", R.drawable.ios_logo);
+			map.put("ItemImage", R.drawable.bank_account_gold);
 			map.put("ItemText", items[i]);
 			map.put("ItemDetail", "详情：" + items[i]);
 			map.put("profit","预期收益率：" +  profits[i]);
