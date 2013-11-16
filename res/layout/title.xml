@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#0000FF" 
+	android:layout_width="fill_parent"
+	android:layout_height="15pt"
+	android:textSize="20sp" 
+	android:textColor="#FFFFFF"
+	android:gravity="center" 
+	android:text="@string/title_activity_main"
+	android:id="@+id/title"></TextView>

@@ -12,4 +12,14 @@
     <string name="title_activity_person_info">PersonInfoActivity</string>
     <string name="person_info_activity_name">解亚龙</string>
 
+    
+    
+    <!-- 底部公共菜单模块 -->
+	<string name="menu_home">首页</string>
+	<string name="menu_brand">分类</string>
+	<string name="menu_shopping_cart">菜单2</string>
+	<string name="menu_my_letao">菜单3</string>
+	<string name="menu_more">菜单4</string>
+	
+	
 </resources>

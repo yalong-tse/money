@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
     
     
     <LinearLayout android:orientation="horizontal" 
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:textColor="#ff0000"
         android:text="@string/hello_world"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
         
         <TextView
         android:id="@+id/list_product_listview_textview_startmoney"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textColor="#ff0000"
         android:text="@string/hello_world"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
         
         
     </LinearLayout>

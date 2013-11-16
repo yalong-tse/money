@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		gridview = (GridView) findViewById(R.id.main_gridview);
 		
-		int len = items.length;
 		for(int i=0;i<items.length;i++)
 		{
 			HashMap<String,Object> map = new HashMap<String,Object>();

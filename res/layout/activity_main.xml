@@ -2,32 +2,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+   android:orientation="vertical"
     tools:context=".MainActivity" >
     
+    <!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/title" />
+	<!-- 底部菜单 -->
+	<include android:id="@+id/bottommenu" layout="@layout/common_bottommenu" />
+	
     <LinearLayout android:orientation="vertical" 
         android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         >
-        <TextView 
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/common_title_bg"
-            android:layout_width="match_parent"
-            style="@style/common_title"
-            android:text="@string/title_activity_main"/>
         
         <GridView android:id="@+id/main_gridview"
             android:layout_height="match_parent"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:background="#000000" 
             android:gravity="center"
             android:verticalSpacing="10dp"
             android:horizontalSpacing="10dp"
             android:stretchMode="columnWidth"
-            android:layout_centerHorizontal="true"
             android:numColumns="auto_fit">
             
         </GridView>
         
     </LinearLayout>
+    
+    
 </RelativeLayout>
