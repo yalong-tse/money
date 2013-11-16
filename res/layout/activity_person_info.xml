@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".PersonInfoActivity" >
+
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <ImageView android:id="@+id/personInfoActivity_person_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/green_person"
+            android:contentDescription="@string/person_info_activity_name"
+            />
+        
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="left">
+            
+            <TextView android:id="@+id/personInfoActivity_person_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/person_info_activity_name"
+                android:textColor="#000000" />
+            
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    ;
+
+</LinearLayout>
