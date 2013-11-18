@@ -10,8 +10,21 @@
     <string name="list_product_imageview_content">产品图标</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
-    <string name="person_info_activity_name">解亚龙</string>
+    
 
+    
+    <!-- 个人设置部分 -->
+    <string name="person_info_activity_name">解亚龙</string>
+    <string name="person_bank_card">我的银行卡</string>
+    <string name="person_bank_card_value">工商银行</string>
+    <string name="person_account">我的账号</string>
+    <string name="person_account_value">123134222@QQ.com</string>
+    <string name="person_property">我的资产</string>
+    <string name="person_property_value">120万</string>
+    <string name="person_blank"></string>
+    
+    
+    
     <!-- 底部公共菜单模块 -->
     <string name="menu_home">首页</string>
     <string name="menu_brand">分类</string>
