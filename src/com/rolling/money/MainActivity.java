@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 	// Gridview 中的菜单
 	private List<HashMap<String,Object>> menuitems = new ArrayList<HashMap<String,Object>>();
 
-	private String[] items = {"理财产品","我的账户","我的资产","每日推荐","风险测试","理财知道","计算器"};
+	private String[] items = {"我的资产","金融超市","资产配置","理财圈","个人设置","网点查询","每日推荐","风险测试","理财计算器","理财资讯","客服咨询","女士专区","我的收藏"};
 	
 	private GridView gridview;
 	
@@ -66,33 +66,64 @@ public class MainActivity extends Activity {
 				Log.d("money", "the index is :" + arg2);
 				switch (arg2)
 				{
-				// 理财产品
+				// 我的资产
 				case 0:
+					
+					break;
+				// 金融超市
+				case 1:
 					Intent intent_product = new Intent();
 					intent_product.setClass(MainActivity.this, ListProductActivity.class);
 					startActivity(intent_product);
 					break;
-				case 1:
+				// 资产配置
+				case 2:
+					break;
+					
+				// 理财圈
+				case 3:
+					break;
+					
+				// 个人设置
+				case 4:
 					Intent intent_person = new Intent();
 					intent_person.setClass(MainActivity.this, PersonInfoActivity.class);
 					startActivity(intent_person);
 					break;
-				case 2:
-					break;
-				case 3:
-					break;
 					
-				case 4:
-					break;
+				// 网点查询
 				case 5:
 					break;
+					
+				// 每日推荐
 				case 6:
 					Intent intent_cal = new Intent();
 					intent_cal.setClass(MainActivity.this, CalculatorActivity.class);
 					startActivity(intent_cal);
 					break;
+				//风险测试
+				case 7:
+					break;
+				// 理财计算器
+				case 8:
 					
-				
+					break;
+				// 理财资讯
+				case 9:
+					break;
+				// 客服咨询
+				case 10:
+					break;
+				// 女士专区
+				case 11:
+					break;
+				// 我的收藏
+				case 12:
+					break;
+				// 
+				case 13:
+					break;
+					
 				}
 			}
 			
