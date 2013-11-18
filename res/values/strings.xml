@@ -10,9 +10,7 @@
     <string name="list_product_imageview_content">产品图标</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
-    
 
-    
     <!-- 个人设置部分 -->
     <string name="person_info_activity_name">解亚龙</string>
     <string name="person_bank_card">我的银行卡</string>
@@ -22,9 +20,7 @@
     <string name="person_property">我的资产</string>
     <string name="person_property_value">120万</string>
     <string name="person_blank"></string>
-    
-    
-    
+
     <!-- 底部公共菜单模块 -->
     <string name="menu_home">首页</string>
     <string name="menu_brand">分类</string>
@@ -33,9 +29,6 @@
     <string name="menu_more">菜单4</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
 
-    
-    
-    
     <!-- 计算器模块 -->
     <string name="hello">  Counter</string>
     <string name="one">1</string>
@@ -59,4 +52,6 @@
     <string name="kai">√x</string>
     <string name="shanchu">ce</string>
     <string name="shan">c</string>
+    <string name="title_activity_property">PropertyActivity</string>
+
 </resources>

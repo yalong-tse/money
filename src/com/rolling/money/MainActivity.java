@@ -68,7 +68,9 @@ public class MainActivity extends Activity {
 				{
 				// 我的资产
 				case 0:
-					
+					Intent intent_property = new Intent();
+					intent_property.setClass(MainActivity.this, PropertyActivity.class);
+					startActivity(intent_property);
 					break;
 				// 金融超市
 				case 1:

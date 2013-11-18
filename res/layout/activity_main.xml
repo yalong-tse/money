@@ -22,7 +22,6 @@
         <GridView android:id="@+id/main_gridview"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:background="#000000" 
             android:gravity="center"
             android:verticalSpacing="10dp"
             android:horizontalSpacing="10dp"
