@@ -11,6 +11,30 @@
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
 
+    <!-- 我的资产部分 -->
+    <string name="title_property">我的资产</string>
+    <string name="overall_property">净资产</string>
+    <string name="overall_property_value">¥500,000.00</string>
+    <string name="overall_property_balance">余额</string>
+    <string name="overall_property_balance_value">¥5789.00</string>
+    <string name="overall_property_borrow">借贷</string>
+    <string name="overall_property_borrow_value">¥4567.00</string>
+    <string name="overall_property_cash">现金</string>
+    <string name="overall_property_cash_value">¥1879.00</string>
+    <string name="overall_property_bankcard">信用卡</string>
+    <string name="overall_property_bankcard_value">¥1879.00</string>
+    <string name="overall_property_saving">储蓄</string>
+    <string name="overall_property_saving_value">¥12879.00</string>
+    <string name="overall_property_invest">投资</string>
+    <string name="overall_property_invest_value">¥32879.00</string>
+    <string name="overall_property_card">储值卡</string>
+    <string name="overall_property_card_value">¥32879.00</string>
+    <string name="overall_property_btc">虚拟货币</string>
+    <string name="overall_property_btc_value">¥3646.00</string>
+    <string name="overall_property_add">自定义添加</string>
+    
+    
+    
     <!-- 个人设置部分 -->
     <string name="person_info_activity_name">解亚龙</string>
     <string name="person_bank_card">我的银行卡</string>

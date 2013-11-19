@@ -16,7 +16,7 @@
         android:src="@drawable/return_home" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_other"
         android:layout_width="wrap_content"
         android:layout_height="20pt"
         android:layout_centerVertical="true"
