@@ -5,11 +5,12 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_main">欢迎光临钱滚翻</string>
+    <string name="title_activity_main">钱滚翻</string>
     <string name="title_activity_list_product">ListProductActivity</string>
     <string name="list_product_imageview_content">产品图标</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
+    <string name="settings">个人设置</string>
 
     <!-- 个人设置部分 -->
     <string name="person_info_activity_name">解亚龙</string>
