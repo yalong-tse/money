@@ -5,16 +5,52 @@
     android:background="@drawable/android_layout_bg"
     tools:context=".PropertyActivity" >
 
-    <include
-        android:id="@+id/title_other"
-        android:layout_marginTop="5dip"
-        layout="@layout/title_other" />
-    
-    
+    <!-- 我的资产界面 -->
+
+    <RelativeLayout
+        android:id="@+id/title_property"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#DD0000"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/title_img_left_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/title_property"
+            android:src="@drawable/return_home" />
+
+        <TextView
+            android:id="@+id/title_other"
+            android:layout_width="wrap_content"
+            android:layout_height="20pt"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/title_property"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/title_img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bank_account_red" />
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_other"
+        android:layout_below="@id/title_property"
         android:fadingEdge="none" >
 
         <LinearLayout
@@ -32,134 +68,86 @@
                 android:shrinkColumns="0"
                 android:stretchColumns="0" >
 
+                <!-- 净资产 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_marginLeft="2.0dip"
-                    android:layout_marginRight="2.0dip"
-                    android:background="@drawable/more_item_press" >
+                    android:layout_height="10dp"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="@string/overall_property"
+                        android:textColor="#222222"
+                        android:textSize="25sp" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/paopao" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_account"
-                                android:textColor="#000000"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_account_value"
-                                android:textColor="#000000" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text="@string/overall_property_value"
+                        android:textColor="#DD0000"
+                        android:textSize="25sp" />
                 </TableRow>
 
+                <!-- 余额 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_marginLeft="2.0dip"
-                    android:layout_marginRight="2.0dip"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/more_item_press"
-                    android:paddingBottom="16.0dip"
-                    android:paddingTop="8.0dip" >
+                    android:orientation="horizontal" >
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/overall_property_balance"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/paopao" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_bank_card"
-                                android:textColor="#000000"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_bank_card_value"
-                                android:textColor="#000000" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/overall_property_balance_value"
+                        android:textColor="#DD0000"
+                        android:textSize="25sp" />
                 </TableRow>
 
+                <!-- 借贷 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_marginLeft="2.0dip"
-                    android:layout_marginRight="2.0dip"
                     android:background="@drawable/more_item_press"
-                    android:paddingBottom="16.0dip"
-                    android:paddingTop="8.0dip" >
+                    android:orientation="horizontal" >
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/overall_property_borrow"
+                        android:textColor="#222222"
+                        android:textSize="25sp" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/paopao" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_property"
-                                android:textColor="#000000"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_property_value"
-                                android:textColor="#000000" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/overall_property_borrow_value"
+                        android:textColor="#00DD00"
+                        android:textSize="25sp" />
                 </TableRow>
             </TableLayout>
 
@@ -168,9 +156,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10.0dip"
+                android:layout_marginLeft="16.0dip"
                 android:text="@string/person_blank"
                 android:textColor="#000000"
-                android:layout_marginLeft="16.0dip"
                 android:textSize="25sp" />
 
             <TableLayout
@@ -179,54 +167,328 @@
                 android:shrinkColumns="0"
                 android:stretchColumns="0" >
 
+                <!-- 现金 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_marginLeft="2.0dip"
-                    android:layout_marginRight="2.0dip"
                     android:background="@drawable/more_item_press"
-                    android:paddingBottom="16.0dip"
-                    android:paddingTop="8.0dip" >
-                    
-                    
-                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical"
                             android:src="@drawable/paopao" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_property"
-                                android:textColor="#000000"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/person_property_value"
-                                android:textColor="#000000" />
-                        </LinearLayout>
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_cash"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
                     </LinearLayout>
-                     
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_cash_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
                 </TableRow>
+
+                <!--  信用卡 -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_bankcard"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_bankcard_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
+                
+                <!--  储蓄 -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_saving"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_saving_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
+                
+                <!--  投资 -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_invest"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_invest_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
+                <!--  储值卡 -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_card"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_card_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
+                
+                 <!--  虚拟货币 -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_btc"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_btc_value"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
+                
+                <!-- 自定义增加  -->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/more_item_press"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/overall_property_add"
+                            android:textColor="#222222"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/person_blank"
+                            android:textColor="#DD0000"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </TableRow>
+                
             </TableLayout>
         </LinearLayout>
     </ScrollView>
 
-    
 </RelativeLayout>
