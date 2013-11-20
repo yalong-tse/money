@@ -23,6 +23,8 @@
     <color name="transaction_payout_amount">#ff54b45d</color>
     <color name="transaction_income_amount">#ffff0000</color>
     <color name="buy_sync_service_seleted_color">#ffff9900</color>
+    <color name="bottom_menu_text">#ffa2a0a1</color>
+    <color name="bottom_menu_stroke">#ffeaeaea</color>
     
     
     <color name="white">#FFFFFFFF</color>
