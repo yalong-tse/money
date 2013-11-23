@@ -105,6 +105,9 @@ public class MainActivity extends Activity {
 					break;
 				//风险测试
 				case 7:
+					Intent intent_risktesting = new Intent();
+					intent_risktesting.setClass(MainActivity.this, RiskTestingActivity.class);
+					startActivity(intent_risktesting);
 					break;
 				// 理财计算器
 				case 8:

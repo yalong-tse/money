@@ -46,6 +46,10 @@
             android:name="com.rolling.money.PropertyActivity"
             android:label="@string/title_activity_property" >
         </activity>
+        <activity
+            android:name="com.rolling.money.RiskTestingActivity"
+            android:label="@string/title_activity_risk_testing" >
+        </activity>
     </application>
 
 </manifest>

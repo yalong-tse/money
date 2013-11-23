@@ -33,6 +33,24 @@
     <string name="overall_property_btc">虚拟货币</string>
     <string name="overall_property_btc_value">¥3646.00</string>
     <string name="overall_property_add">自定义添加</string>
+
+    
+    <!-- 风险测试部分 -->
+    <string name="title_risktesting">风险测试</string>
+    <string name="title_risktesting_job">您的职业</string>
+    <string name="title_risktesting_knowledge">您对投资的了解程度</string>
+    <string name="title_risktesting_family">您的家庭负担</string>
+    <string name="title_risktesting_house">您的置业情况</string>
+    <string name="title_risktesting_experience">您的投资经验</string>
+    <string name="title_risktesting_age">您的年龄</string>
+    <string name="title_risktesting_tolerance">一年可承受的亏损度</string>
+    <string name="title_risktesting_firstfactor">投资的首要考虑因素</string>
+    <string name="title_risktesting_archivement">您过去的投资绩效</string>
+    <string name="title_risktesting_lost_mentalstate">如果投资损失了您的心里状态</string>
+    <string name="title_risktesting_main_invest">您的主要投资</string>
+    <string name="title_risktesting_refuse_investtools">未来避免的投资工具</string>
+    
+    
     
     
     
@@ -77,6 +95,9 @@
     <string name="kai">√x</string>
     <string name="shanchu">ce</string>
     <string name="shan">c</string>
+    
+    
     <string name="title_activity_property">PropertyActivity</string>
+    <string name="title_activity_risk_testing">RiskTestingActivity</string>
 
 </resources>
