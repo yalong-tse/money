@@ -40,17 +40,19 @@ public class ListProductActivity extends Activity {
 			map.put("ItemDetail", "发行银行：" + items[i]);
 			map.put("profit","预期收益率：" +  profits[i]);
 			map.put("startmoney", "起够金额：" + startmoney[i]);
+			map.put("moreImage", R.drawable.ic_arrow);
 			listItem.add(map);
 		}
 		
 		
 		SimpleAdapter listAdapter = new SimpleAdapter(this,listItem,R.layout.list_product_listview_item,
-				new String[]{"ItemImage","ItemText","ItemDetail","profit","startmoney"},
+				new String[]{"ItemImage","ItemText","ItemDetail","profit","startmoney","moreImage"},
 				new int[]{R.id.list_product_listview_imageview,
 				R.id.list_product_listview_textview_title,
 				R.id.list_product_listview_textview_detail,
 				R.id.list_product_listview_textview_profit,
-				R.id.list_product_listview_textview_startmoney});
+				R.id.list_product_listview_textview_startmoney,
+				R.id.list_product_more_image});
 		
 		
 		listview.setAdapter(listAdapter);

@@ -4,9 +4,11 @@
     android:layout_height="match_parent"
     tools:context=".RiskTestingActivity" >
 
-    <!-- 风险测试界面  -->
+    <!-- 风险测试界面 -->
 
-	<!--  top title -->
+
+    <!-- top title -->
+
     <RelativeLayout
         android:id="@+id/title_property"
         android:layout_width="match_parent"
@@ -48,6 +50,7 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/risktesting_srollview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_property"
@@ -68,364 +71,342 @@
                 android:shrinkColumns="0"
                 android:stretchColumns="0" >
 
-                <!--  您的职业 -->
+                <!-- 您的职业 -->
 
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_job"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_job"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_job"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
+
                 <!-- 您对投资的了解程度 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_knowledge"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_know"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_know"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                
+
                 <!-- 您的家庭负担 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_family"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_family"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_family"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                
+
                 <!-- 您目前的职业情况 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_house"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_house"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_house"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
+
                 <!-- 您的投资经验 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_experience"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_experience"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_experience"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                <!-- 您的年龄  -->
+
+                <!-- 您的年龄 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_age"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_age"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                
-                <!-- 一年可承受的亏损率  -->
+
+                <!-- 一年可承受的亏损率 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_tolerance"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_tolerance"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_tolerance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                <!-- 投资的首要考虑因素  -->
+
+                <!-- 投资的首要考虑因素 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_firstfactor"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_firstfactor"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_firstfactor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                
-                <!-- 您过去的投资绩效  -->
+
+                <!-- 您过去的投资绩效 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_archivement"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_archivement"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_archivement"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
-                
-                <!-- 如果您损失了您的心理状态  -->
+
+                <!-- 如果您损失了您的心理状态 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_lost_mentalstate"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_lost_mentalstate"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_lost_mentalstate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
 
-                
                 <!-- 您目前的主要投资 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:gravity="left"
                         android:text="@string/title_risktesting_main_invest"
-                        android:gravity="left"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_main_invest"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_main_invest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
 
-                <!-- 未来避免的投资工具-->
+                <!-- 未来避免的投资工具 -->
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
                     android:orientation="horizontal" >
-                    
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:text="@string/title_risktesting_refuse_investtools"
                         android:gravity="left"
+                        android:text="@string/title_risktesting_refuse_investtools"
                         android:textColor="#222222"
-                        android:textSize="20sp" 
-                        />
-                    
-                    <Spinner android:id="@+id/risktesting_refuse_investtools"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/risktesting_refuse_investtools"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
                         android:layout_gravity="center_vertical"
-                        />
-
+                        android:layout_marginRight="10dp"
+                        android:gravity="right" />
                 </TableRow>
-                
             </TableLayout>
+
+            <!-- 开始测试按钮 -->
+            <Button
+                android:id="@+id/begin_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:text="@string/title_risktesting_begin_button" />
         </LinearLayout>
     </ScrollView>
+
+    
 
 </RelativeLayout>
