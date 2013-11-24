@@ -50,6 +50,10 @@
             android:name="com.rolling.money.RiskTestingActivity"
             android:label="@string/title_activity_risk_testing" >
         </activity>
+        <activity
+            android:name="com.rolling.money.ProductDetailActivity"
+            android:label="@string/title_activity_product_detail" >
+        </activity>
     </application>
 
 </manifest>
