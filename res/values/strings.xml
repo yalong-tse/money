@@ -56,6 +56,26 @@
     
     <!-- 产品详情  -->
     <string name="title_product_detail">产品详情</string>
+    <string name="product_detail_productname">乾元—尊享型2013年第12期理财产品(55天)</string>
+    <string name="product_detail_profit_value">6%</string>
+    <string name="product_detail_profit_key">预期年化收益</string>
+    
+    <string name="product_detail_start_value">10万</string>
+    <string name="product_detail_start_key">起购金额</string>
+    
+    <string name="product_detail_invest_duration_value">24个月</string>
+    <string name="product_detail_invest_duration_key">投资期限</string>
+    
+    <string name="product_detail_saledate_value">2013-11-11至2013-12-10</string>
+    <string name="product_detail_saledate_key">发售日期</string>
+    
+    
+    <string name="product_detail_profitdate_value">2013-12-11至2015-12-10</string>
+    <string name="product_detail_profitdate_key">计息日期</string>
+    
+    
+    
+    
     
     <!-- 个人设置部分 -->
     <string name="person_info_activity_name">解亚龙</string>
