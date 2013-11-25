@@ -165,6 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal" >
 
             <TextView
@@ -177,6 +178,7 @@
                 android:id="@+id/product_detail_saledate_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:text="@string/product_detail_saledate_value"
                 android:textColor="@color/orange" />
         </LinearLayout>
@@ -187,6 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal" >
 
             <TextView
@@ -199,8 +202,58 @@
                 android:id="@+id/product_detail_profitdate_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:text="@string/product_detail_profitdate_value"
                 android:textColor="@color/orange" />
+        </LinearLayout>
+
+        <!-- 加入收藏 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 加入收藏 -->
+
+            <TextView
+                android:id="@+id/product_detail_add_collection_btn"
+                android:layout_width="105dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:background="@drawable/btn_blue_released"
+                android:text="@string/product_detail_btn_add_collection"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <!-- 电话咨询 -->
+
+            <TextView
+                android:id="@+id/product_detail_dail_btn"
+                android:layout_width="105dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_blue_released"
+                android:text="@string/product_detail_btn_dail"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <!-- 附近网点 -->
+
+            <TextView
+                android:id="@+id/product_detail_nearby_btn"
+                android:layout_width="105dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_blue_released"
+                android:text="@string/product_detail_btn_nearby"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
