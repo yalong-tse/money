@@ -4,6 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal"
     android:padding="5dp"
+    android:background="@drawable/android_layout_bg"
     tools:context=".ListProductActivity" >
 
     <include android:id="@+id/title" layout="@layout/title" />

@@ -5,7 +5,11 @@ import java.util.HashMap;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -56,6 +60,21 @@ public class ListProductActivity extends Activity {
 		
 		
 		listview.setAdapter(listAdapter);
+		
+		
+		// 选择条目打开详情界面
+		listview.setOnItemClickListener(new OnItemClickListener() {
+			
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				
+				Intent product_detail_intent = new Intent();
+				product_detail_intent.setClass(ListProductActivity.this, ProductDetailActivity.class);
+				startActivity(product_detail_intent);
+			}
+			
+		});
 		
 	}
 

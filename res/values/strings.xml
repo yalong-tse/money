@@ -54,8 +54,8 @@
     <string name="title_risktesting_begin_button">开始测试</string>
     
     
-    
-    
+    <!-- 产品详情  -->
+    <string name="title_product_detail">产品详情</string>
     
     <!-- 个人设置部分 -->
     <string name="person_info_activity_name">解亚龙</string>
@@ -75,6 +75,8 @@
     <string name="menu_more">菜单4</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
 
+    
+    
     <!-- 计算器模块 -->
     <string name="hello">  Counter</string>
     <string name="one">1</string>
