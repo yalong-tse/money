@@ -10,8 +10,10 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 public class ListProductActivity extends Activity {
 
@@ -69,7 +71,28 @@ public class ListProductActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				
+				LinearLayout line_layout = (LinearLayout) view;
+				TextView tv_productname = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_title);
+				TextView tv_productprofit = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_profit);
+				TextView tv_productstartbuy = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_startmoney);
+				
+				
+				
+				// ´«µÝ²ÎÊý
+				String product_name = (String) tv_productname.getText();
+				String product_profit = (String) tv_productprofit.getText();
+				String product_startbuy = (String) tv_productstartbuy.getText();
+				
+				Bundle product_bundle = new Bundle();
+				
+				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
+				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
+				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
+				
+				
 				Intent product_detail_intent = new Intent();
+				product_detail_intent.putExtras(product_bundle);
+				
 				product_detail_intent.setClass(ListProductActivity.this, ProductDetailActivity.class);
 				startActivity(product_detail_intent);
 			}

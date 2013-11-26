@@ -49,8 +49,9 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/product_detail_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/product_detail_relativelayout"
         android:orientation="vertical" >
 
@@ -80,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="9"
-                android:text="@string/product_detail_productname"
                 android:textColor="#DD2222"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -164,8 +164,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal" >
 
             <TextView
@@ -188,8 +188,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal" >
 
             <TextView
@@ -223,8 +223,8 @@
                 android:layout_width="105dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:gravity="center"
                 android:background="@drawable/btn_blue_released"
+                android:gravity="center"
                 android:text="@string/product_detail_btn_add_collection"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -235,9 +235,9 @@
                 android:id="@+id/product_detail_dail_btn"
                 android:layout_width="105dip"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/btn_blue_released"
+                android:gravity="center"
                 android:text="@string/product_detail_btn_dail"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -248,13 +248,31 @@
                 android:id="@+id/product_detail_nearby_btn"
                 android:layout_width="105dip"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/btn_blue_released"
+                android:gravity="center"
                 android:text="@string/product_detail_btn_nearby"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_detail_sameproduct_title"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_height="25dp"
+        android:layout_below="@id/product_detail_layout"
+        android:layout_marginTop="20dp"
+        android:background="@color/brand_gallery_blue"
+        android:text="@string/product_detail_same_product_title"
+        android:textColor="@color/white_50" />
+
+    <ListView
+        android:id="@+id/product_detail_sameproduct_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/product_detail_sameproduct_title" />
+    
 
 </RelativeLayout>
