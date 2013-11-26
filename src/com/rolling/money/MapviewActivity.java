@@ -9,6 +9,7 @@ import com.baidu.mapapi.MapView;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MapviewActivity extends MapActivity {
 
@@ -20,6 +21,11 @@ public class MapviewActivity extends MapActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mapview);
+		
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("Íøµã²éÑ¯");
+		
+		
 		mBMapMan = new BMapManager(getApplication());
 		mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", null);
 		super.initMapActivity(mBMapMan);
