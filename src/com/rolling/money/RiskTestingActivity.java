@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class RiskTestingActivity extends Activity {
 	
@@ -41,6 +42,9 @@ public class RiskTestingActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_risk_testing);
+		
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("∑Áœ’≤‚ ‘");
 	
 		this.spinner_age = (Spinner) findViewById(R.id.risktesting_age);
 		this.spinner_job = (Spinner) findViewById(R.id.risktesting_job);

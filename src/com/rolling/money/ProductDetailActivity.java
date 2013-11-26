@@ -33,6 +33,10 @@ public class ProductDetailActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_product_detail);
 
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("产品详情");
+		
+		
 		// 处理列表界面传递过来的参数
 		Bundle bundle = this.getIntent().getExtras();
 		String product_name = bundle.getString(Constants.PRODUCT_NAME);

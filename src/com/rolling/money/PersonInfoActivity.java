@@ -3,6 +3,7 @@ package com.rolling.money;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class PersonInfoActivity extends Activity {
 
@@ -10,6 +11,9 @@ public class PersonInfoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_person_info);
+		
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("Œ“");
 		
 	}
 
