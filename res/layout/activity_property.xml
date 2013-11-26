@@ -45,7 +45,7 @@
                         android:gravity="left"
                         android:text="@string/overall_property"
                         android:textColor="#222222"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                         android:gravity="right"
                         android:text="@string/overall_property_value"
                         android:textColor="#DD0000"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
                 </TableRow>
 
                 <!-- 余额 -->
@@ -73,7 +73,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="@string/overall_property_balance"
                         android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                         android:layout_marginRight="10dp"
                         android:text="@string/overall_property_balance_value"
                         android:textColor="#DD0000"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
                 </TableRow>
 
                 <!-- 借贷 -->
@@ -99,7 +99,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="@string/overall_property_borrow"
                         android:textColor="#222222"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                         android:layout_marginRight="10dp"
                         android:text="@string/overall_property_borrow_value"
                         android:textColor="#00DD00"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
                 </TableRow>
             </TableLayout>
 
@@ -154,7 +154,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_cash"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -170,7 +170,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_cash_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
 
@@ -199,7 +199,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_bankcard"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -215,7 +215,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_bankcard_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 
@@ -245,7 +245,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_saving"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -261,7 +261,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_saving_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 
@@ -291,7 +291,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_invest"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -307,7 +307,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_invest_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 
@@ -336,7 +336,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_card"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -352,7 +352,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_card_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 
@@ -382,7 +382,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_btc"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -398,7 +398,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_btc_value"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 
@@ -428,7 +428,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/overall_property_add"
                             android:textColor="#222222"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -444,7 +444,7 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/person_blank"
                             android:textColor="#DD0000"
-                            android:textSize="25sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </TableRow>
                 

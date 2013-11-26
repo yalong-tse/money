@@ -95,6 +95,10 @@ public class MainActivity extends Activity {
 					
 				// 网点查询
 				case 5:
+					Intent intent_map = new Intent();
+					intent_map.setClass(MainActivity.this, MapviewActivity.class);
+					startActivity(intent_map);
+					
 					break;
 					
 				// 每日推荐
