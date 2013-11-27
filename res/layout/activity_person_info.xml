@@ -13,171 +13,328 @@
         android:id="@+id/title_bar"
         layout="@layout/title" />
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/risktesting_srollview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_bar"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="10.0dip"
-        android:paddingRight="10.0dip"
-        android:paddingTop="10.0dip" >
+        android:fadingEdge="none" >
 
-        <!-- 个人头像，账号等信息 -->
-
-        <TableLayout
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:shrinkColumns="0"
-            android:stretchColumns="0" >
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip" >
 
-            <TableRow
+            <!-- 个人头像，账号等信息 -->
+
+            <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0" >
 
-                <LinearLayout
-                    android:id="@+id/person_img_linelayout"
+                <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal" >
-
-                    <!-- 我的图片 -->
-
-                    <ImageView
-                        android:id="@+id/personInfoActivity_person_image"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="3"
-                        android:contentDescription="@string/person_account"
-                        android:src="@drawable/green_person" />
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/person_img_linelayout"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <!-- 我的图片 -->
+
+                        <ImageView
+                            android:id="@+id/personInfoActivity_person_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="3"
+                            android:contentDescription="@string/person_account"
+                            android:src="@drawable/green_person" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="3"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:text="@string/person_account"
+                                android:textColor="#000000"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:text="@string/person_account_value"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="3"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- 我的相册 -->
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:gravity="left"
+                            android:text="@string/person_photograph"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- 我的资料 -->
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="8.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
                         android:orientation="vertical" >
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="left"
-                            android:text="@string/person_account"
-                            android:textColor="#000000"
-                            android:textSize="25sp" />
+                        <!-- 性别 -->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="left"
-                            android:text="@string/person_account_value"
-                            android:textColor="#000000"
-                            android:textSize="20sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/person_infomation_sex"
+                                android:src="@drawable/paopao" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_infomation_sex"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/list_product_imageview_content"
+                                android:src="@drawable/ic_arrow" />
+                        </LinearLayout>
+
+                        <!-- 我的邮箱 -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/person_infomation_sex"
+                                android:src="@drawable/paopao" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_infomation_email"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/list_product_imageview_content"
+                                android:src="@drawable/ic_arrow" />
+                        </LinearLayout>
+
+                        <!-- 我的手机号 -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/person_infomation_mobile"
+                                android:src="@drawable/paopao" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_infomation_mobile"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/list_product_imageview_content"
+                                android:src="@drawable/ic_arrow" />
+                        </LinearLayout>
+
+                        <!-- 所在城市 -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/person_infomation_city"
+                                android:src="@drawable/paopao" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_infomation_city"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/list_product_imageview_content"
+                                android:src="@drawable/ic_arrow" />
+                        </LinearLayout>
                     </LinearLayout>
+                </TableRow>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="3"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
+                <!-- 安全与隐私 -->
 
-            <!-- 我的相册 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/paopao" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="6"
-                        android:gravity="left"
-                        android:text="@string/person_photograph"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
-
-            <!-- 我的资料 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="10.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
                     android:gravity="center_vertical"
-                    android:orientation="vertical" >
-
-                    <!-- 性别 -->
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:contentDescription="@string/person_infomation_sex"
+                            android:contentDescription="@string/app_name"
                             android:src="@drawable/paopao" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="6"
-                            android:gravity="center_vertical"
-                            android:text="@string/person_infomation_sex"
+                            android:gravity="left"
+                            android:text="@string/person_privacy"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -190,29 +347,39 @@
                             android:contentDescription="@string/list_product_imageview_content"
                             android:src="@drawable/ic_arrow" />
                     </LinearLayout>
+                </TableRow>
 
-                    <!-- 我的邮箱 -->
+                <!-- 消息通知 -->
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:contentDescription="@string/person_infomation_sex"
+                            android:contentDescription="@string/app_name"
                             android:src="@drawable/paopao" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="6"
-                            android:gravity="center_vertical"
-                            android:text="@string/person_infomation_email"
+                            android:gravity="left"
+                            android:text="@string/person_message"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -225,29 +392,39 @@
                             android:contentDescription="@string/list_product_imageview_content"
                             android:src="@drawable/ic_arrow" />
                     </LinearLayout>
+                </TableRow>
 
-                    <!-- 我的手机号 -->
+                <!-- 辅助功能 -->
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:contentDescription="@string/person_infomation_mobile"
+                            android:contentDescription="@string/app_name"
                             android:src="@drawable/paopao" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="6"
-                            android:gravity="center_vertical"
-                            android:text="@string/person_infomation_mobile"
+                            android:gravity="left"
+                            android:text="@string/person_assistant"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -260,29 +437,39 @@
                             android:contentDescription="@string/list_product_imageview_content"
                             android:src="@drawable/ic_arrow" />
                     </LinearLayout>
+                </TableRow>
 
-                    <!-- 所在城市 -->
+                <!-- 关于 -->
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="8.0dip" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:contentDescription="@string/person_infomation_city"
+                            android:contentDescription="@string/app_name"
                             android:src="@drawable/paopao" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="6"
-                            android:gravity="center_vertical"
-                            android:text="@string/person_infomation_city"
+                            android:gravity="left"
+                            android:text="@string/person_about"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -295,189 +482,9 @@
                             android:contentDescription="@string/list_product_imageview_content"
                             android:src="@drawable/ic_arrow" />
                     </LinearLayout>
-                </LinearLayout>
-            </TableRow>
-
-            <!-- 安全与隐私 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/paopao" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="6"
-                        android:gravity="left"
-                        android:text="@string/person_privacy"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
-
-            <!-- 消息通知 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/paopao" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="6"
-                        android:gravity="left"
-                        android:text="@string/person_message"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
-
-            <!-- 辅助功能 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/paopao" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="6"
-                        android:gravity="left"
-                        android:text="@string/person_assistant"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
-
-            <!-- 关于 -->
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_marginLeft="2.0dip"
-                android:layout_marginRight="2.0dip"
-                android:background="@drawable/more_item_press"
-                android:gravity="center_vertical"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="8.0dip" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/paopao" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="6"
-                        android:gravity="left"
-                        android:text="@string/person_about"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/list_product_imageview_content"
-                        android:src="@drawable/ic_arrow" />
-                </LinearLayout>
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

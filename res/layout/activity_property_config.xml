@@ -10,12 +10,17 @@
     <include
         android:id="@+id/title_bar"
         layout="@layout/title" />
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:fadingEdge="none" >
 
     <LinearLayout
         android:id="@+id/product_detail_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_bar"
         android:orientation="vertical" >
 
         <!-- 个人头像，账号等信息 -->
@@ -290,7 +295,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="2"
-                    android:gravity="right"
+                    android:gravity="left"
                     android:text="@string/config_assets_deploy"
                     android:textColor="@color/black_25"
                     android:textSize="15sp" />
@@ -318,7 +323,120 @@
             </TableRow>
             
             
+            
+            <!-- 理财目标 -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:text="@string/config_assets_objective"
+                    android:textColor="@color/black_25"
+                    android:textSize="15sp" />
+
+                
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/list_product_imageview_content"
+                        android:src="@drawable/ic_arrow" />
+                
+            </TableRow>
+            
+            
+            <!-- 投资组合 -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/config_invest_combination"
+                    android:textColor="@color/black_25"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/config_invest_combination_suggest"
+                    android:textColor="@color/black_25"
+                    android:textSize="12sp" />
+                
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/list_product_imageview_content"
+                        android:src="@drawable/ic_arrow" />
+                
+            </TableRow>
+            
+            
+             <!-- 循环周期 -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:text="@string/config_recycle_duration"
+                    android:textColor="@color/black_25"
+                    android:textSize="15sp" />
+
+                
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/list_product_imageview_content"
+                        android:src="@drawable/ic_arrow" />
+                
+            </TableRow>
+            
+            
         </TableLayout>
     </LinearLayout>
 
+    </ScrollView>
 </RelativeLayout>

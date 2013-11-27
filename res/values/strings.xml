@@ -97,6 +97,7 @@
     <string name="config_assets_deploy_remark">（仅供参考）</string>
     <string name="config_assets_objective">理财目标</string>
     <string name="config_invest_combination">投资组合</string>
+    <string name="config_invest_combination_suggest">（推荐）</string>
     <string name="config_recycle_duration">循环周期</string>
     
     
