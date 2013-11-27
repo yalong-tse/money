@@ -13,7 +13,7 @@ public class PersonInfoActivity extends Activity {
 		setContentView(R.layout.activity_person_info);
 		
 		TextView textView = (TextView)findViewById(R.id.title);
-		textView.setText("我");
+		textView.setText("个人设置");
 		
 	}
 

@@ -7,11 +7,11 @@
     android:background="@drawable/android_layout_bg"
     tools:context=".ListProductActivity" >
 
-    <include android:id="@+id/title" layout="@layout/title" />
+    <include android:id="@+id/title_bar" layout="@layout/title" />
     
     <ListView android:id="@+id/list_product_listview"
         android:layout_width="fill_parent"
-        android:layout_below="@id/title"
+        android:layout_below="@id/title_bar"
         android:layout_height="match_parent"
         />
     

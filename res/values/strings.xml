@@ -19,10 +19,10 @@
     <string name="overall_property_value">1200万</string>
     <string name="overall_property_bank_value">共11张银行卡</string>
     <string name="overall_property_bank">我的银行卡</string>
-    <string name="overall_property_house_value">¥5789.00</string>
+    <string name="overall_property_house_value">自有住房2套</string>
     <string name="overall_property_house">固定资产</string>
     <string name="overall_property_car_value">共2辆车辆</string>
-    <string name="overall_property_car">私有车辆</string>
+    <string name="overall_property_car">自有车辆</string>
     <string name="overall_property_add">自定义添加</string>
 
     

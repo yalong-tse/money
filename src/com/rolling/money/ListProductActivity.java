@@ -37,6 +37,8 @@ public class ListProductActivity extends Activity {
 		setContentView(R.layout.activity_list_product);
 		
 		listview = (ListView) findViewById(R.id.list_product_listview);
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("½ðÈÚ³¬ÊÐ");
 		
 		for(int i=0;i<items.length;i++)
 		{
