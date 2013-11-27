@@ -25,7 +25,6 @@
     <string name="overall_property_car">自有车辆</string>
     <string name="overall_property_add">自定义添加</string>
 
-    
     <!-- 风险测试部分 -->
     <string name="title_risktesting">风险测试</string>
     <string name="title_risktesting_job">您的职业</string>
@@ -111,5 +110,8 @@
     <string name="title_activity_risk_testing">RiskTestingActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_mapview">MapviewActivity</string>
+    <string name="title_activity_property_config">PropertyConfigActivity</string>
+    <string name="title_activity_circle">CircleActivity</string>
+    <string name="title_activity_recommend">RecommendActivity</string>
 
 </resources>

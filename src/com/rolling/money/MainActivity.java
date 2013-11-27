@@ -80,10 +80,16 @@ public class MainActivity extends Activity {
 					break;
 				// 资产配置
 				case 2:
+					Intent intent_property_config = new Intent();
+					intent_property_config.setClass(MainActivity.this, PropertyConfigActivity.class);
+					startActivity(intent_property_config);
 					break;
 					
 				// 理财圈
 				case 3:
+					Intent intent_circle = new Intent();
+					intent_circle.setClass(MainActivity.this, CircleActivity.class);
+					startActivity(intent_circle);
 					break;
 					
 				// 个人设置
@@ -103,9 +109,10 @@ public class MainActivity extends Activity {
 					
 				// 每日推荐
 				case 6:
-					Intent intent_cal = new Intent();
-					intent_cal.setClass(MainActivity.this, CalculatorActivity.class);
-					startActivity(intent_cal);
+					Intent intent_recommend = new Intent();
+					intent_recommend.setClass(MainActivity.this,RecommendActivity.class);
+					startActivity(intent_recommend);
+					
 					break;
 				//风险测试
 				case 7:

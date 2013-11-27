@@ -78,6 +78,18 @@
             android:name="com.rolling.money.MapviewActivity"
             android:label="@string/title_activity_mapview" >
         </activity>
+        <activity
+            android:name="com.rolling.money.PropertyConfigActivity"
+            android:label="@string/title_activity_property_config" >
+        </activity>
+        <activity
+            android:name="com.rolling.money.CircleActivity"
+            android:label="@string/title_activity_circle" >
+        </activity>
+        <activity
+            android:name="com.rolling.money.RecommendActivity"
+            android:label="@string/title_activity_recommend" >
+        </activity>
     </application>
 
 </manifest>
