@@ -49,7 +49,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_job"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_job"
@@ -76,7 +76,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_knowledge"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_know"
@@ -103,7 +103,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_family"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_family"
@@ -130,7 +130,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_house"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_house"
@@ -157,7 +157,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_experience"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_experience"
@@ -184,7 +184,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_age"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_age"
@@ -211,7 +211,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_tolerance"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_tolerance"
@@ -238,7 +238,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_firstfactor"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_firstfactor"
@@ -265,7 +265,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_archivement"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_archivement"
@@ -292,7 +292,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_lost_mentalstate"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_lost_mentalstate"
@@ -319,7 +319,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_main_invest"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_main_invest"
@@ -346,7 +346,7 @@
                         android:gravity="left"
                         android:text="@string/title_risktesting_refuse_investtools"
                         android:textColor="#222222"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/risktesting_refuse_investtools"

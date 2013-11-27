@@ -6,7 +6,10 @@
     tools:context=".PropertyActivity" >
 
     <!-- 我的资产界面 -->
-	<include android:id="@+id/title_bar" layout="@layout/title" />
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -29,98 +32,167 @@
                 android:shrinkColumns="0"
                 android:stretchColumns="0" >
 
-                <!-- 净资产 -->
+                <!-- 图标和注册账号 -->
 
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="10dp"
                     android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="left"
-                        android:text="@string/overall_property"
-                        android:textColor="#222222"
-                        android:textSize="15sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="right"
-                        android:text="@string/overall_property_value"
-                        android:textColor="#DD0000"
-                        android:textSize="15sp" />
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:text="@string/overall_property_value"
+                            android:textColor="#DD0000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
+                    </LinearLayout>
                 </TableRow>
 
-                <!-- 余额 -->
+                <!-- 我的银行卡 -->
 
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:text="@string/overall_property_balance"
-                        android:textColor="#000000"
-                        android:textSize="15sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:text="@string/overall_property_balance_value"
-                        android:textColor="#DD0000"
-                        android:textSize="15sp" />
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:contentDescription="@string/overall_property_bank"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_bank"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_bank_value"
+                            android:textColor="#DD0000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
+                    </LinearLayout>
                 </TableRow>
 
-                <!-- 借贷 -->
+                <!-- 固定资产 -->
 
                 <TableRow
                     android:layout_width="fill_parent"
                     android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:text="@string/overall_property_borrow"
-                        android:textColor="#222222"
-                        android:textSize="15sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:text="@string/overall_property_borrow_value"
-                        android:textColor="#00DD00"
-                        android:textSize="15sp" />
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:contentDescription="@string/overall_property_house"
+                            android:src="@drawable/paopao" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_house"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_house_value"
+                            android:textColor="#DD0000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
+                    </LinearLayout>
                 </TableRow>
             </TableLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10.0dip"
-                android:layout_marginLeft="16.0dip"
-                android:text="@string/person_blank"
-                android:textColor="#000000"
-                android:textSize="25sp" />
 
             <TableLayout
                 android:layout_width="fill_parent"
@@ -128,326 +200,58 @@
                 android:shrinkColumns="0"
                 android:stretchColumns="0" >
 
-                <!-- 现金 -->
+                <!-- 汽车 -->
 
                 <TableRow
                     android:layout_width="fill_parent"
                     android:background="@drawable/more_item_press"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
                     <LinearLayout
                         android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:contentDescription="@string/overall_property_car"
                             android:src="@drawable/paopao" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_cash"
-                            android:textColor="#222222"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_car"
+                            android:textColor="#000000"
                             android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_cash_value"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="@string/overall_property_car_value"
                             android:textColor="#DD0000"
                             android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-
-                <!--  信用卡 -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
 
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_bankcard"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_bankcard_value"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/list_product_imageview_content"
+                            android:src="@drawable/ic_arrow" />
                     </LinearLayout>
                 </TableRow>
-                
-                
-                <!--  储蓄 -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_saving"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_saving_value"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-                
-                
-                <!--  投资 -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_invest"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_invest_value"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-                
-                <!--  储值卡 -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_card"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_card_value"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-                
-                
-                 <!--  虚拟货币 -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_btc"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_btc_value"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-                
-                
-                <!-- 自定义增加  -->
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:background="@drawable/more_item_press"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/paopao" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/overall_property_add"
-                            android:textColor="#222222"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/person_blank"
-                            android:textColor="#DD0000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </TableRow>
-                
             </TableLayout>
         </LinearLayout>
     </ScrollView>
