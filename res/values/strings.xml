@@ -75,6 +75,31 @@
     <string name="person_assistant">辅助功能</string>
     <string name="person_about">关于</string>
     <string name="person_blank"></string>
+    
+    
+    <!-- 资产配置模块 -->
+    <string name="config_username">常晓静</string>
+    <string name="config_username_gender">女士</string>
+    <string name="config_scope_label">综合指数</string>
+    <string name="config_scope_value">75分</string>
+    <string name="config_tolerance">风险承受力</string>
+    <string name="config_tolerance_grade">较高</string>
+    <string name="config_preference">投资偏好</string>
+    <string name="config_preference_value">稳健型</string>
+    <string name="config_wealthtype">财富类型</string>
+    <string name="config_wealthtype_value">低净值</string>
+    <string name="config_investor_desc">投资者描述</string>
+    <string name="config_investor_desc_content">青年女士，事业有成家庭幸福，有房有车，收入稳定，无房贷压力，可用于投资的财富相对宽松，有一定投资经验。专家建议可选用银行理财产品，基金类产品进行周期性投资实现长期财富增值。</string>
+    <string name="config_consultant">王经理，私人金融顾问</string>
+    <string name="config_consultant_titles">智通财富认证投资理财师</string>
+    <string name="config_consultant_contactme">联系Ta</string>
+    <string name="config_assets_deploy">资产配置建议</string>
+    <string name="config_assets_deploy_remark">（仅供参考）</string>
+    <string name="config_assets_objective">理财目标</string>
+    <string name="config_invest_combination">投资组合</string>
+    <string name="config_recycle_duration">循环周期</string>
+    
+    
 
     <!-- 底部公共菜单模块 -->
     <string name="menu_bottom_1">财务分析</string>
