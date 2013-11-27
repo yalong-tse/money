@@ -288,8 +288,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="2"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="@string/config_assets_deploy"
                     android:textColor="@color/black_25"
                     android:textSize="15sp" />
@@ -298,8 +299,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="left"
                     android:text="@string/config_assets_deploy_remark"
                     android:textColor="@color/black_25"
                     android:textSize="12sp" />
@@ -310,11 +311,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="10dp"
-                        android:layout_weight="3"
+                        android:layout_weight="1"
                         android:contentDescription="@string/list_product_imageview_content"
                         android:src="@drawable/ic_arrow" />
                 
             </TableRow>
+            
+            
         </TableLayout>
     </LinearLayout>
 
