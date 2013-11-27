@@ -294,23 +294,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="2"
+                    android:layout_weight="5"
                     android:gravity="left"
                     android:text="@string/config_assets_deploy"
-                    android:textColor="@color/black_25"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="left"
-                    android:text="@string/config_assets_deploy_remark"
-                    android:textColor="@color/black_25"
-                    android:textSize="12sp" />
-
-                
                 <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -339,10 +328,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="4"
+                    android:layout_weight="5"
                     android:gravity="left"
                     android:text="@string/config_assets_objective"
-                    android:textColor="@color/black_25"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
                 
@@ -373,22 +362,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="2"
+                    android:layout_weight="5"
                     android:gravity="left"
                     android:text="@string/config_invest_combination"
-                    android:textColor="@color/black_25"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="left"
-                    android:text="@string/config_invest_combination_suggest"
-                    android:textColor="@color/black_25"
-                    android:textSize="12sp" />
-                
                 <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -416,10 +395,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="4"
+                    android:layout_weight="5"
                     android:gravity="left"
                     android:text="@string/config_recycle_duration"
-                    android:textColor="@color/black_25"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
                 
