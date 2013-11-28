@@ -34,11 +34,31 @@ public class MainActivity extends Activity {
 		{
 			HashMap<String,Object> map = new HashMap<String,Object>();
 			if(i==0)
-				map.put("image", R.drawable.menu_calendar);
+				map.put("image", R.drawable.module21);
 			else if(i==1)
-				map.put("image", R.drawable.menu_chart);
-			else
-				map.put("image", R.drawable.menu_history);
+				map.put("image", R.drawable.module13);
+			else if(i==2)
+				map.put("image", R.drawable.module20);
+			else if(i==3)
+				map.put("image", R.drawable.module6);
+			else if (i==4)
+				map.put("image", R.drawable.module19);
+			else if(i==5)
+				map.put("image", R.drawable.module8);
+			else if(i==6)
+				map.put("image", R.drawable.module3);
+			else if(i==7)
+				map.put("image", R.drawable.module3);
+			else if(i==8)
+				map.put("image", R.drawable.module23);
+			else if(i==9)
+				map.put("image", R.drawable.module9);
+			else if(i==10)
+				map.put("image", R.drawable.module15);
+			else if(i==11)
+				map.put("image", R.drawable.module10);
+			else if(i==12)
+				map.put("image", R.drawable.module14);
 			map.put("item", items[i]);
 			
 			menuitems.add(map);
