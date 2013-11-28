@@ -42,11 +42,11 @@ public class MainActivity extends Activity {
 			else if(i==3)
 				map.put("image", R.drawable.module6);
 			else if (i==4)
-				map.put("image", R.drawable.module19);
+				map.put("image", R.drawable.module1);
 			else if(i==5)
 				map.put("image", R.drawable.module8);
 			else if(i==6)
-				map.put("image", R.drawable.module3);
+				map.put("image", R.drawable.module5);
 			else if(i==7)
 				map.put("image", R.drawable.module3);
 			else if(i==8)
