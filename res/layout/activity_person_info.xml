@@ -481,6 +481,7 @@
                             android:layout_weight="1"
                             android:contentDescription="@string/list_product_imageview_content"
                             android:src="@drawable/ic_arrow" />
+                        
                     </LinearLayout>
                 </TableRow>
             </TableLayout>

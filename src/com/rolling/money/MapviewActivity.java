@@ -2,6 +2,7 @@ package com.rolling.money;
 
 import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.GeoPoint;
+import com.baidu.mapapi.MKSearch;
 import com.baidu.mapapi.MapActivity;
 import com.baidu.mapapi.MapController;
 import com.baidu.mapapi.MapView;
@@ -15,7 +16,10 @@ public class MapviewActivity extends MapActivity {
 
 	private BMapManager mBMapMan;
 	
+	// my key
 	String mStrKey = "02AD0B51770522AB1EECE64CB3ED44B6B930364F";
+	
+	private MKSearch mMKSearch = null;  
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +27,26 @@ public class MapviewActivity extends MapActivity {
 		setContentView(R.layout.activity_mapview);
 		
 		TextView textView = (TextView)findViewById(R.id.title);
+		
 		textView.setText("网点查询");
 		
 		
 		mBMapMan = new BMapManager(getApplication());
 		mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", null);
+		
+		mMKSearch = new MKSearch();   
+		
+		mMKSearch.init(mBMapMan, new MapSearchListener());//注意，MKSearchListener只支持一个，以最后一次设置为准  
+		
+		// 一个例子，查询所有ptLB 到 ptRT 范围内的所有招商银行
+		// 北京西站   
+		GeoPoint ptLB = new GeoPoint( (int)(39.901375 * 1E6),(int)(116.329099 * 1E6));    
+		// 北京北站   
+		GeoPoint ptRT = new GeoPoint( (int)(39.949404 * 1E6),(int)(116.360719 * 1E6));   
+		mMKSearch.poiSearchInbounds("招商银行", ptLB, ptRT);  
+
+		
+		
 		super.initMapActivity(mBMapMan);
 		MapView mMapView = (MapView) findViewById(R.id.bmapsView);
 
@@ -70,6 +89,19 @@ public class MapviewActivity extends MapActivity {
 	protected boolean isRouteDisplayed() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		
+		if(mBMapMan!=null)
+		{
+			mBMapMan.destroy();
+			mBMapMan = null;
+		}
+		super.onDestroy();
 	}
 
 }

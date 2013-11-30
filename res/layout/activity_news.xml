@@ -1,0 +1,381 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    tools:context=".NewsActivity" >
+
+    <!-- 理财咨询 -->
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/news_srollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:fadingEdge="none" >
+
+        <!-- 主题图片 -->
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:contentDescription="@string/new_a_abstract"
+                    android:src="@drawable/news" />
+            </TableRow>
+
+            <!-- 新闻1 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_a_title"
+                    android:src="@drawable/news2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_a_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_a_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+            
+            <!-- 新闻2 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_b_title"
+                    android:src="@drawable/news3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_b_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_b_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+
+            <!-- 新闻3 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_c_title"
+                    android:src="@drawable/news4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_c_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_c_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+            
+            <!-- 新闻4 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_d_title"
+                    android:src="@drawable/news5" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_d_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_d_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+            
+            <!-- 新闻5 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_e_title"
+                    android:src="@drawable/news6" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_e_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_e_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+            
+            <!-- 新闻6 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/new_f_title"
+                    android:src="@drawable/news7" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_f_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_f_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+            
+            <!-- 新闻7 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/news8" />
+
+                <LinearLayout
+                    android:id="@+id/person_img_linelayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_g_title"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_g_abstract"
+                        android:textColor="@color/black_25"
+                        android:textSize="12sp" />
+                    
+                    
+                </LinearLayout>
+            </TableRow>
+            
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

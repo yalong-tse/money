@@ -90,6 +90,14 @@
             android:name="com.rolling.money.RecommendActivity"
             android:label="@string/title_activity_recommend" >
         </activity>
+        <activity
+            android:name="com.rolling.money.CalActivity"
+            android:label="@string/title_activity_cal" >
+        </activity>
+        <activity
+            android:name="com.rolling.money.NewsActivity"
+            android:label="@string/title_activity_news" >
+        </activity>
     </application>
 
 </manifest>

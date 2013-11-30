@@ -142,10 +142,16 @@ public class MainActivity extends Activity {
 					break;
 				// 理财计算器
 				case 8:
-					
+					Intent intent_cal = new Intent();
+					intent_cal.setClass(MainActivity.this, CalActivity.class);
+					startActivity(intent_cal);
 					break;
 				// 理财资讯
 				case 9:
+					Intent intent_news = new Intent();
+					intent_news.setClass(MainActivity.this, NewsActivity.class);
+					startActivity(intent_news);
+					
 					break;
 				// 客服咨询
 				case 10:

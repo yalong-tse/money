@@ -75,8 +75,7 @@
     <string name="person_assistant">辅助功能</string>
     <string name="person_about">关于</string>
     <string name="person_blank"></string>
-    
-    
+
     <!-- 资产配置模块 -->
     <string name="config_username">常晓静</string>
     <string name="config_username_gender">女士</string>
@@ -99,7 +98,29 @@
     <string name="config_invest_combination">投资组合（推荐）</string>
     <string name="config_invest_combination_suggest">（推荐）</string>
     <string name="config_recycle_duration">循环周期</string>
+
+    <!-- 理财计算器 -->
+    <string name="cal_house">房贷</string>
+    <string name="cal_merchant">商贷</string>
+    <string name="cal_publicfund">公积金贷</string>
+    <string name="cal_persontax">个税</string>
     
+    
+    <!-- 理财资讯 -->
+    <string name="new_a_title">外媒称中国RQFII配额在伦敦基金界遇冷</string>
+    <string name="new_a_abstract">英国财政大臣乔治在北京向全球媒体宣布</string>
+    <string name="new_b_title">互联网货基将上演龙虎斗</string>
+    <string name="new_b_abstract">微信版余额宝有望年内上线</string>
+    <string name="new_c_title">49岁杨明辉任华夏基金董事长</string>
+    <string name="new_c_abstract">华夏基金管理公司董事长正式换帅</string>
+    <string name="new_d_title">60只股基青睐伊利股份</string>
+    <string name="new_d_abstract">六成股基首席重仓股四季度以来跑输大盘</string>
+    <string name="new_e_title">180只股基重仓股次季领涨</string>
+    <string name="new_e_abstract">震荡市下，基金选股成为业绩比拼制胜关键</string>
+    <string name="new_f_title">国金证券布局六大主题基金</string>
+    <string name="new_f_abstract">深化改革促动市场 布局六大主题基金</string>
+    <string name="new_g_title">华商价值共享</string>
+    <string name="new_g_abstract">华商基金-进可攻退可守的基金</string>
     
 
     <!-- 底部公共菜单模块 -->
@@ -139,5 +160,8 @@
     <string name="title_activity_property_config">PropertyConfigActivity</string>
     <string name="title_activity_circle">CircleActivity</string>
     <string name="title_activity_recommend">RecommendActivity</string>
+    <string name="title_activity_caculator">CaculatorActivity</string>
+    <string name="title_activity_cal">CalActivity</string>
+    <string name="title_activity_news">NewsActivity</string>
 
 </resources>
