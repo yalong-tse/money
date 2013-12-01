@@ -4,17 +4,17 @@
     android:layout_height="match_parent"
     tools:context=".MapviewActivity" >
 
-        <!-- 个人设置 -->
+    <!-- 个人设置 -->
 
     <include
         android:id="@+id/title_bar"
         layout="@layout/title" />
 
-    <com.baidu.mapapi.MapView
+    <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapsView"
-        android:layout_below="@id/title_bar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar"
         android:clickable="true" />
 
 </RelativeLayout>
