@@ -27,8 +27,8 @@ public class MapviewActivity extends Activity {
 
 	//private BMapManager mBMapMan;
 
-	// my key
-	String mStrKey = "02AD0B51770522AB1EECE64CB3ED44B6B930364F";
+	// my key  for baidumapapi_v2.3.0.jar 的key，自己注册的key
+	String mStrKey = "VQlWYq291altvBQwTXMwzaZf";  
 
 	private MKSearch mMKSearch = null;
 
@@ -38,6 +38,8 @@ public class MapviewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		
 		 MyApplication app = (MyApplication)this.getApplication();
          if (app.mBMapManager == null) {
              app.mBMapManager = new BMapManager(this);
@@ -47,27 +49,27 @@ public class MapviewActivity extends Activity {
 		//mBMapMan = new BMapManager(getApplication());
 		//mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", new MyGeneralListener());
 		
-        Log.d("mapview", "1111111111");
+        //Log.d("mapview", "1111111111");
 		setContentView(R.layout.activity_mapview);
 		mMapView = (MapView) findViewById(R.id.bmapsView);
 		TextView textView = (TextView) findViewById(R.id.title);
 		textView.setText("网点查询");
 		
 		mMapView.getController().enableClick(true);
-		mMapView.getController().setZoom(12);
-		Log.d("mapview", "222222222222");
+		mMapView.getController().setZoom(16);
+		//Log.d("mapview", "222222222222");
 		
 		GeoPoint xizhimen = new GeoPoint((int) (39.949404 * 1E6),(int) (116.360719 * 1E6));
 		mMapView.getController().animateTo(xizhimen);
 		mMKSearch = new MKSearch();
 		mMKSearch.init(app.mBMapManager, new MapSearchListener());
 		
-		Log.d("mapview", "3333333333333333333");
+		//Log.d("mapview", "3333333333333333333");
 		// 搜索西直门地铁站500米范围的招商银行
 		mMKSearch.poiSearchNearBy("银行", xizhimen, 5000);
 		
 		
-		Log.d("MAP TEST", "1111111111");
+		//Log.d("MAP TEST", "1111111111");
 		
 		
 		// mMKSearch = new MKSearch();
