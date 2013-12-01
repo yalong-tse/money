@@ -1,7 +1,9 @@
 package com.rolling.money;
 
 import com.baidu.mapapi.BMapManager;
+import com.baidu.mapapi.MKGeneralListener;
 import com.baidu.platform.comapi.basestruct.GeoPoint;
+import com.baidu.mapapi.map.MKEvent;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.search.MKAddrInfo;
 import com.baidu.mapapi.search.MKBusLineResult;
@@ -11,16 +13,11 @@ import com.baidu.mapapi.search.MKPoiResult;
 import com.baidu.mapapi.search.MKSearch;
 import com.baidu.mapapi.search.MKSearchListener;
 import com.baidu.mapapi.search.MKShareUrlResult;
-import com.baidu.mapapi.search.MKSuggestionInfo;
 import com.baidu.mapapi.search.MKSuggestionResult;
 import com.baidu.mapapi.search.MKTransitRouteResult;
 import com.baidu.mapapi.search.MKWalkingRouteResult;
-
-
-import android.location.Location;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.Application;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
@@ -28,7 +25,7 @@ import android.widget.Toast;
 
 public class MapviewActivity extends Activity {
 
-	private BMapManager mBMapMan;
+	//private BMapManager mBMapMan;
 
 	// my key
 	String mStrKey = "02AD0B51770522AB1EECE64CB3ED44B6B930364F";
@@ -41,22 +38,31 @@ public class MapviewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		 MyApplication app = (MyApplication)this.getApplication();
+         if (app.mBMapManager == null) {
+             app.mBMapManager = new BMapManager(this);
+             app.mBMapManager.init(MyApplication.strKey,new MyApplication.MyGeneralListener());
+         }
+         
+		//mBMapMan = new BMapManager(getApplication());
+		//mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", new MyGeneralListener());
+		
+        Log.d("mapview", "1111111111");
 		setContentView(R.layout.activity_mapview);
-
-		TextView textView = (TextView) findViewById(R.id.title);
-
-		textView.setText("网点查询");
-
-		mBMapMan = new BMapManager(getApplication());
-		mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", null);
 		mMapView = (MapView) findViewById(R.id.bmapsView);
+		TextView textView = (TextView) findViewById(R.id.title);
+		textView.setText("网点查询");
+		
 		mMapView.getController().enableClick(true);
 		mMapView.getController().setZoom(12);
+		Log.d("mapview", "222222222222");
 		
 		GeoPoint xizhimen = new GeoPoint((int) (39.949404 * 1E6),(int) (116.360719 * 1E6));
 		mMapView.getController().animateTo(xizhimen);
 		mMKSearch = new MKSearch();
-		mMKSearch.init(mBMapMan, new MapSearchListener());
+		mMKSearch.init(app.mBMapManager, new MapSearchListener());
+		
+		Log.d("mapview", "3333333333333333333");
 		// 搜索西直门地铁站500米范围的招商银行
 		mMKSearch.poiSearchNearBy("银行", xizhimen, 5000);
 		
@@ -138,17 +144,13 @@ public class MapviewActivity extends Activity {
 
 	@Override
 	protected void onPause() {
-		if (mBMapMan != null) {
-			mBMapMan.stop();
-		}
+		mMapView.onPause();
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		if (mBMapMan != null) {
-			mBMapMan.start();
-		}
+		mMapView.onResume();
 		super.onResume();
 	}
 
@@ -163,13 +165,26 @@ public class MapviewActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
-
-		if (mBMapMan != null) {
-			mBMapMan.destroy();
-			mBMapMan = null;
-		}
+		mMapView.destroy();
+		mMKSearch.destory();
 		super.onDestroy();
 	}
+	
+	
+	// 常用事件监听，用来处理通常的网络错误，授权验证错误等
+    static class MyGeneralListener implements MKGeneralListener {
+        
+        @Override
+        public void onGetNetworkState(int iError) {
+           
+        }
+
+        @Override
+        public void onGetPermissionState(int iError) {
+            
+        }
+    }
+	
 
 	public class MapSearchListener implements MKSearchListener {
 
