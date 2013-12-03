@@ -3,16 +3,23 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal"
-    android:padding="5dp"
     android:background="@drawable/android_layout_bg"
     tools:context=".ListProductActivity" >
 
-    <include android:id="@+id/title_bar" layout="@layout/title" />
+    <include android:id="@+id/title_bar" 
+        layout="@layout/title" android:layout_alignParentTop="true"/>
+    
+    <!-- 顶部查询条件 -->
+   	<include android:id="@+id/topmenu" layout="@layout/common_topmenu" 
+   	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   	    android:layout_below="@+id/title_bar"/>
     
     <ListView android:id="@+id/list_product_listview"
         android:layout_width="fill_parent"
-        android:layout_below="@id/title_bar"
+        android:layout_below="@id/topmenu"
         android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
         />
     
 </RelativeLayout>

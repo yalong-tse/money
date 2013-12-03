@@ -164,4 +164,48 @@
     <string name="title_activity_cal">CalActivity</string>
     <string name="title_activity_news">NewsActivity</string>
 
+    
+    <!-- 金融超市 -->
+    <string name="menu_top_1">金融\n机构</string>
+    <string name="menu_top_2">投资\n金额</string>
+    <string name="menu_top_3">收益\n类型</string>
+    <string name="menu_top_4">投资\n期限</string>
+    <string-array name="menu_top_1">
+        <item>不限</item>
+        <item>中国工商银行</item>
+        <item>中国农业银行</item>
+        <item>中国银行</item>
+        <item>中国建设银行</item>
+        <item>交通银行</item>
+        <item>中信银行</item>
+        <item>中国光大银行</item>
+        <item>华夏银行</item>
+        <item>广发银行</item>
+        <item>招商银行</item>
+        <item>民生银行</item>
+        <item>上海浦东发展银行</item>
+    </string-array>
+    <string-array name="menu_top_2">
+        <item>不限</item>
+        <item>5万以内</item>
+        <item>5&#8211;10万</item>
+        <item>10&#8211;50万</item>
+        <item>50&#8211;100万</item>
+        <item>100万以上</item>
+    </string-array>
+    <string-array name="menu_top_3">
+        <item>不限</item>
+        <item>保本固定收益</item>
+        <item>保本浮动收益</item>
+        <item>非保本浮动收益</item>
+    </string-array>
+    <string-array name="menu_top_4">
+        <item>不限</item>
+        <item>3个月以内</item>
+        <item>3&#8211;6个月</item>
+        <item>6&#8211;12个月</item>
+        <item>12&#8211;24个月</item>
+        <item>24个月以上</item>
+    </string-array>
+    
 </resources>
