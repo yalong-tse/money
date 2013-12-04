@@ -13,11 +13,17 @@
         layout="@layout/title" />
     
     
+    <ScrollView
+        android:id="@+id/news_srollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:fadingEdge="none" >
+    
     <LinearLayout
         android:id="@+id/product_detail_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_bar"
         android:orientation="vertical" >
 
         <!-- 产品名称 -->
@@ -238,11 +244,19 @@
         android:text="@string/product_detail_same_product_title"
         android:textColor="@color/white_50" />
 
-    <ListView
-        android:id="@+id/product_detail_sameproduct_listview"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/product_detail_sameproduct_title" />
     
+    <GridView android:id="@+id/product_detail_gridview" 
+        android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:numColumns="4">
+        
+        
+    </GridView>
 
+    
+    </ScrollView>
 </RelativeLayout>
