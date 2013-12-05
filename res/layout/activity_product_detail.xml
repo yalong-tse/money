@@ -244,6 +244,12 @@
         android:text="@string/product_detail_same_product_title"
         android:textColor="@color/white_50" />
 
+    <ListView
+        android:id="@+id/product_detail_sameproduct_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/product_detail_sameproduct_title" 
+        android:cacheColorHint="#00000000"/>
     
     <GridView android:id="@+id/product_detail_gridview" 
         android:layout_height="match_parent"

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:gravity="center">
+	
+	<LinearLayout 
+	    android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:baselineAligned="false">
+		
+	    <!-- menu1:投资金额 -->
+		<LinearLayout android:orientation="vertical" android:id="@+id/layout_top_1"
+			android:layout_width="0dip" android:layout_weight="1"
+			android:layout_height="wrap_content" android:clickable="true"
+			android:background="@drawable/bottom_bar">
+			
+				
+			<TextView android:id="@+id/menu_top_1"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="15sp" android:gravity="center"
+				android:textColor="@color/bottom_menu_text" android:text="@string/menu_top_1" 
+				android:lines="2"/>
+				
+			<ImageView android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal" 
+				android:layout_height="7dp"
+				android:src="@drawable/arrow_down" />
+			
+		</LinearLayout>
+		
+		<!-- menu2:投资时间 -->
+		<LinearLayout android:orientation="vertical" android:id="@+id/layout_top_2"
+			android:background="@drawable/bottom_bar" android:layout_width="0dip"
+			android:layout_weight="1" android:layout_height="wrap_content"
+			android:clickable="true">
+			
+				
+			<TextView android:id="@+id/menu_top_2"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="15sp" android:gravity="center"
+				android:textColor="@color/bottom_menu_text" android:text="@string/menu_top_2" 
+				android:lines="2"/>
+			<ImageView android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal" android:src="@drawable/arrow_down" 
+				android:layout_height="7dp"
+				/>
+				
+		</LinearLayout>
+		
+		<!-- menu3:收益类型 -->
+		<LinearLayout android:orientation="vertical"
+			android:id="@+id/layout_top_3" android:background="@drawable/bottom_bar"
+			android:layout_width="0dip" android:layout_weight="1"
+			android:layout_height="wrap_content" android:clickable="true">
+			
+				
+			<TextView android:id="@+id/menu_top_3"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="15sp" android:gravity="center"
+				android:textColor="@color/bottom_menu_text" android:text="@string/menu_top_3" 
+				android:lines="2"/>
+			<ImageView android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_height="7dp"
+				android:src="@drawable/arrow_down" />
+				
+		</LinearLayout>
+		
+		<!-- menu4: popupWindow测试 -->
+		<LinearLayout android:orientation="vertical"
+			android:id="@+id/layout_top_4" android:background="@drawable/bottom_bar"
+			android:layout_width="0dip" android:layout_weight="1"
+			android:layout_height="wrap_content" android:clickable="true">
+			
+				
+			<TextView android:id="@+id/menu_top_4"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="15sp" android:gravity="center"
+				android:textColor="@color/bottom_menu_text" android:text="@string/menu_top_4"
+				android:lines="2" />
+			<ImageView android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_height="7dp"
+				android:src="@drawable/arrow_down" />
+				
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+</RelativeLayout>
