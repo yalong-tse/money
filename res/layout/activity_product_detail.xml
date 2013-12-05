@@ -366,7 +366,7 @@
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:numStars="5"
-                    android:rating="4"
+                    android:rating="3.5"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="5dip" />
@@ -380,7 +380,7 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:horizontalSpacing="10dp"
-                android:numColumns="3.5"
+                android:numColumns="4"
                 android:stretchMode="columnWidth"
                 android:verticalSpacing="10dp" >
             </com.rolling.money.utils.CustomGridview>
