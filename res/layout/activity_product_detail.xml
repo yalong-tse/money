@@ -30,6 +30,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -39,19 +42,50 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
                     android:layout_weight="3"
                     android:contentDescription="@string/list_product_imageview_content"
                     android:src="@drawable/bank_account_red" />
 
-                <TextView
-                    android:id="@+id/product_detail_name_textview"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:layout_weight="9"
-                    android:textColor="#DD2222"
-                    android:textSize="15sp" />
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <!-- 银行名称 -->
+
+                        <TextView
+                            android:id="@+id/product_detail_bank_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#DD2222"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:contentDescription="@string/action_settings"
+                            android:src="@drawable/jb5" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/product_detail_name_textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#DD2222"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <!-- 产品收益情况行 -->
@@ -59,6 +93,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
+                android:baselineAligned="false"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -136,7 +174,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -144,6 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
                     android:text="@string/product_detail_saledate_key"
                     android:textColor="@color/black" />
 
@@ -161,7 +202,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -169,6 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
                     android:text="@string/product_detail_profitdate_key"
                     android:textColor="@color/black" />
 
@@ -181,72 +225,162 @@
                     android:textColor="@color/orange" />
             </LinearLayout>
 
-            <!-- 加入收藏 -->
+            <!-- 发售状态 -->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
-                <!-- 加入收藏 -->
-
                 <TextView
-                    android:id="@+id/product_detail_add_collection_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="@drawable/btn_blue_released"
-                    android:gravity="center"
-                    android:text="@string/product_detail_btn_add_collection"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <!-- 电话咨询 -->
+                    android:textSize="15sp"
+                    android:text="@string/product_detail_sellstatus_title"
+                    android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/product_detail_dail_btn"
+                    android:id="@+id/product_detail_profitdate_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/btn_blue_released"
-                    android:gravity="center"
-                    android:text="@string/product_detail_btn_dail"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <!-- 附近网点 -->
-
-                <TextView
-                    android:id="@+id/product_detail_nearby_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/btn_blue_released"
-                    android:gravity="center"
-                    android:text="@string/product_detail_btn_nearby"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/product_detail_sellstatus_value"
+                    android:textColor="@color/orange" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/product_detail_sameproduct_title"
-                android:layout_width="fill_parent"
-                android:layout_height="25dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/brand_gallery_blue"
-                android:gravity="center_vertical"
-                android:text="@string/product_detail_same_product_title"
-                android:textColor="@color/white_50" />
+            <!-- 投资币种 -->
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
+                    android:text="@string/product_detail_billtype_title"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_detail_profitdate_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/product_detail_billtype_value"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+
+            <!-- 投资类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
+                    android:text="@string/product_detail_investtpye_title"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_detail_profitdate_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/product_detail_investtype_value"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+
+            <!-- 风险评级 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
+                    android:text="@string/product_detail_riskgrade_title"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/riskgrade_rating_web"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dip" />
+                
+            </LinearLayout>
+
+            <!-- 流动性评级 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/more_item_press"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/product_detail_flowgrade_title"
+                    android:textSize="15sp"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/flowgrade_rating_web"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dip" />
+                
+            </LinearLayout>
+            
             <com.rolling.money.utils.CustomGridview
                 android:id="@+id/product_detail_gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:horizontalSpacing="10dp"
-                android:numColumns="4"
+                android:numColumns="3.5"
                 android:stretchMode="columnWidth"
                 android:verticalSpacing="10dp" >
             </com.rolling.money.utils.CustomGridview>

@@ -2,6 +2,9 @@ package com.rolling.money;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
+import com.rolling.money.utils.CustomGridview;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -15,7 +18,7 @@ import android.widget.TextView;
 public class ProductDetailActivity extends Activity {
 
 	// 生成动态数组，加入数据
-	ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
+	ArrayList<HashMap<String, Object>> menuitems = new ArrayList<HashMap<String, Object>>();
 
 	String[] productitems = { "乾元—尊享型2013年第12期理财产品(55天)",
 			"心喜系列2013年第46期人民币组合投资型非保本理财产品(182天)",
@@ -29,6 +32,10 @@ public class ProductDetailActivity extends Activity {
 	String[] profits = { "3.5%", "4.5%", "2.8%", "3.5%", "4.3%", "6.5%",
 			"4.6%", "4.3%" };
 	String[] startmoney = { "1万", "2万", "3万", "4万", "5万", "6万", "7万", "8万" };
+	
+
+	private String[] items_fun = {"加入收藏","预约购买","网点查询","产品解读","关联产品","同行产品","用户评论","理财计算器"};
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +51,15 @@ public class ProductDetailActivity extends Activity {
 		String product_name = bundle.getString(Constants.PRODUCT_NAME);
 		String product_profit = bundle.getString(Constants.PRODUCT_PROFIT);
 		String product_startbuy = bundle.getString(Constants.PRODUCT_START_BUY);
+		String bank_name = bundle.getString(Constants.PRODUCT_BANK_NAME);
 		
 
 		TextView tv_product_name = (TextView) findViewById(R.id.product_detail_name_textview);
 		TextView tv_product_profit = (TextView) findViewById(R.id.product_detail_profit_value);
 		TextView tv_product_startbuy = (TextView) findViewById(R.id.product_detail_start_value);
 		ImageView product_imageview = (ImageView) findViewById(R.id.product_detail_productimage_imageview);
+		TextView tv_bankname = (TextView) findViewById(R.id.product_detail_bank_name);
+		
 
 		// 处理图片
 		Bitmap bitmap = this.getIntent().getParcelableExtra(Constants.PRODUCT_DRAWABLE);
@@ -59,6 +69,57 @@ public class ProductDetailActivity extends Activity {
 		tv_product_profit.setText(product_profit);
 		tv_product_startbuy.setText(product_startbuy);
 		product_imageview.setImageBitmap(bitmap);
+		tv_bankname.setText(bank_name);
+		
+		
+		
+		// 
+		CustomGridview grid_view = (CustomGridview) findViewById(R.id.product_detail_gridview);
+		
+		
+		for(int i=0;i<items_fun.length;i++)
+		{
+			HashMap<String,Object> map = new HashMap<String,Object>();
+			if(i==0)
+				map.put("image", R.drawable.module21);
+			else if(i==1)
+				map.put("image", R.drawable.module13);
+			else if(i==2)
+				map.put("image", R.drawable.module20);
+			else if(i==3)
+				map.put("image", R.drawable.module6);
+			else if (i==4)
+				map.put("image", R.drawable.module1);
+			else if(i==5)
+				map.put("image", R.drawable.module8);
+			else if(i==6)
+				map.put("image", R.drawable.module5);
+			else if(i==7)
+				map.put("image", R.drawable.module3);
+			else if(i==8)
+				map.put("image", R.drawable.module23);
+			else if(i==9)
+				map.put("image", R.drawable.module9);
+			else if(i==10)
+				map.put("image", R.drawable.module15);
+			else if(i==11)
+				map.put("image", R.drawable.module10);
+			else if(i==12)
+				map.put("image", R.drawable.module14);
+			map.put("item", items_fun[i]);
+			
+			menuitems.add(map);
+		}
+		
+		String[] from = {"image","item"};
+		int[] to = {R.id.main_menuitem_image,R.id.main_menuitem_text};
+		SimpleAdapter menuAdapter = new SimpleAdapter(this,
+				menuitems,
+				R.layout.main_items,
+				from,to);
+		
+		
+		grid_view.setAdapter(menuAdapter);
 
 		
 	}

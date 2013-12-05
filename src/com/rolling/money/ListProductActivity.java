@@ -146,6 +146,7 @@ public class ListProductActivity extends Activity {
 				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
 				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
 				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
+				product_bundle.putString(Constants.PRODUCT_BANK_NAME, items[position]);
 				
 				
 				Intent product_detail_intent = new Intent();
