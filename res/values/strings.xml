@@ -58,7 +58,15 @@
     <string name="product_detail_btn_dail">电话咨询</string>
     <string name="product_detail_btn_nearby">附近网点</string>
     <string name="product_detail_same_product_title">相似产品</string>
-
+    <string name="product_detail_sellstatus_title">发售状态</string>
+    <string name="product_detail_sellstatus_value">在售</string>
+    <string name="product_detail_billtype_title">投资币种</string>
+    <string name="product_detail_billtype_value">人民币</string>
+	<string name="product_detail_investtpye_title">投资类型</string>
+    <string name="product_detail_investtype_value">投资类型</string>
+    <string name="product_detail_riskgrade_title">风险评级</string>
+    <string name="product_detail_flowgrade_title">流动性评级</string>
+    
     <!-- 个人设置部分 -->
     <string name="person_bank_card">我的银行卡</string>
     <string name="person_bank_card_value">工商银行</string>

@@ -6,7 +6,9 @@ import java.util.HashMap;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -126,23 +129,30 @@ public class ListProductActivity extends Activity {
 				TextView tv_productname = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_title);
 				TextView tv_productprofit = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_profit);
 				TextView tv_productstartbuy = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_startmoney);
-				
-				
-				
+				ImageView iv_titleimage = (ImageView) line_layout.findViewById(R.id.list_product_listview_imageview);
+				 
 				// ´«µÝ²ÎÊý
 				String product_name = (String) tv_productname.getText();
 				String product_profit = (String) tv_productprofit.getText();
 				String product_startbuy = (String) tv_productstartbuy.getText();
+				//Drawable drawable1 = iv_titleimage.getDrawable();
+				
+				iv_titleimage.setDrawingCacheEnabled(true);
+				Bitmap obmp = Bitmap.createBitmap(iv_titleimage.getDrawingCache());
+				iv_titleimage.setDrawingCacheEnabled(false);
 				
 				Bundle product_bundle = new Bundle();
 				
 				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
 				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
 				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
+				product_bundle.putString(Constants.PRODUCT_BANK_NAME, items[position]);
 				
 				
 				Intent product_detail_intent = new Intent();
-				product_detail_intent.putExtras(product_bundle);
+				product_detail_intent.putExtra(Constants.PRODUCT_DETAIL,product_bundle);
+				
+				product_detail_intent.putExtra(Constants.PRODUCT_DRAWABLE, obmp);
 				
 				product_detail_intent.setClass(ListProductActivity.this, ProductDetailActivity.class);
 				startActivity(product_detail_intent);
