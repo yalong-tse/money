@@ -1,0 +1,294 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/dialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialogTitle"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider_line"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+           		android:layout_height="wrap_content">
+	            <ImageView
+	                android:id="@+id/person_profile"
+	                android:src="@drawable/person_profile"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:paddingLeft="10dp"
+	                android:layout_centerInParent="true"
+	                 />
+	            
+	            <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_toRightOf="@+id/person_profile"
+	                android:orientation="vertical"
+	                android:paddingLeft="5dp" >
+	                
+	                <TextView android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_personname"
+	                    android:textSize="18sp"
+	                    android:textColor="@android:color/black"
+	                    />
+	
+	                <RatingBar
+	                    android:id="@+id/ratingBar1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:numStars="5"
+	                    android:rating="5"
+	                    android:isIndicator="true"
+	      				style="@style/myRatingBar"  
+	                     />
+	
+	                <TextView
+	                    android:layout_width="106dp"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_personname1"
+	                    android:textSize="15sp" />
+
+	                <TextView
+	                    android:layout_width="170dp"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_address"
+	                    android:textSize="15sp" />
+	                
+	            </LinearLayout>
+
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/person_profile"
+	                android:paddingLeft="120dp"
+	                android:src="@drawable/zhongxinbank" />
+
+            </RelativeLayout>
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:paddingTop="10dp">
+            
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 android:paddingLeft="10dp">
+                
+            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	               >
+	                
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_bankno_key"/>
+	                    
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_bankno_value"
+	                	android:textColor="@color/dialog_value"
+	                	android:paddingLeft="3dp"/>
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	               >
+	                
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_congye_key"/>
+	                    
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_congye_value"
+	                	android:textColor="@color/dialog_value"
+	                	android:paddingLeft="3dp"/>
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	               >
+	                
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_dept_key"/>
+	                    
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_dept_value"
+	                	android:textColor="@color/dialog_value"
+	                	android:paddingLeft="3dp"/>
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	               >
+	                
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_goodat_key"/>
+	                    
+	                <TextView 
+	                    android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	android:text="@string/dialog_goodat_value"
+	                	android:textColor="@color/dialog_value"
+	                	android:paddingLeft="3dp"
+	                	/>
+	                
+	            </LinearLayout>
+	            
+            </LinearLayout>
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:paddingTop="20dp">
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_gravity="center"
+	                >
+	                
+	                <Button
+	                    android:id="@+id/dialog_btn_1" 
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_btn_1"
+	                    android:textColor="@android:color/white"
+	                    android:background="@drawable/btn_dialog_green"
+	                    android:padding="10dp"
+	                    android:layout_marginTop="5dp"
+	                    android:layout_marginBottom="3dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="10dp"
+	                    />
+	                
+	                 <Button 
+	                    android:id="@+id/dialog_btn_2" 
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_btn_2"
+	                    android:textColor="@android:color/white"
+	                    android:background="@drawable/btn_dialog_blue"
+	                    android:padding="10dp"
+	                    android:layout_marginTop="5dp"
+	                    android:layout_marginBottom="3dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="10dp"
+	                    />
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_gravity="center"
+	                >
+	                
+	                <Button
+	                    android:id="@+id/dialog_btn_3" 
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_btn_3"
+	                    android:gravity="center"
+	                    android:textColor="@android:color/white"
+	                    android:background="@drawable/btn_dialog_blue"
+	                    android:padding="10dp"
+	                    android:layout_marginTop="2dp"
+	                    android:layout_marginBottom="25dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="10dp"
+	                    />
+	                
+	                 <Button 
+	                    android:id="@+id/dialog_btn_4" 
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/dialog_btn_4"
+	                    android:gravity="center"
+	                    android:textColor="@android:color/white"
+	                    android:background="@drawable/btn_dialog_green"
+	                    android:padding="10dp"
+	                    android:layout_marginTop="2dp"
+	                    android:layout_marginBottom="25dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="10dp"
+	                    />
+	                
+	            </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+        
+    </TableLayout>
+    
+
+</RelativeLayout>

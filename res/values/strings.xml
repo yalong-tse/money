@@ -208,4 +208,25 @@
         <item>24个月以上</item>
     </string-array>
     
+       <!-- dialog -->
+    <string name="dialogTitle">联系理财经理</string>
+    <string name="dialog_personname">李璐璐</string>
+    <string name="dialog_personname1">认证理财师</string>
+    <string name="dialog_address">中信银行北京海淀支行</string>
+    <string name="dialog_bankno_key">银行工号：</string>
+    <string name="dialog_bankno_value">ZX010200101</string>
+    <string name="dialog_congye_key">从业年限：</string>
+    <string name="dialog_congye_value">3年</string>
+    <string name="dialog_dept_key">所属部门：</string>
+    <string name="dialog_dept_value">电话银行中心</string>
+    <string name="dialog_goodat_key">擅长领域：</string>
+    <string name="dialog_goodat_value">银行卡,保险,电子银行,房产投资,\n证券,黄金,外汇,基金,受托理财</string>
+    <string name="dialog_btn_1">隐私电话通信</string>
+    <string name="dialog_btn_2">隐私短信留言</string>
+    <string name="dialog_btn_3">在线沟通</string>
+    <string name="dialog_btn_4">离线留言</string>
+
+    <string name="contackmanager">联系理财经理</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    
 </resources>
