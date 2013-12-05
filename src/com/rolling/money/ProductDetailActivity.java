@@ -5,7 +5,9 @@ import java.util.HashMap;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -38,18 +40,25 @@ public class ProductDetailActivity extends Activity {
 		
 		
 		// 处理列表界面传递过来的参数
-		Bundle bundle = this.getIntent().getExtras();
+		Bundle bundle = this.getIntent().getBundleExtra(Constants.PRODUCT_DETAIL);
 		String product_name = bundle.getString(Constants.PRODUCT_NAME);
 		String product_profit = bundle.getString(Constants.PRODUCT_PROFIT);
 		String product_startbuy = bundle.getString(Constants.PRODUCT_START_BUY);
+		
 
 		TextView tv_product_name = (TextView) findViewById(R.id.product_detail_name_textview);
 		TextView tv_product_profit = (TextView) findViewById(R.id.product_detail_profit_value);
 		TextView tv_product_startbuy = (TextView) findViewById(R.id.product_detail_start_value);
+		ImageView product_imageview = (ImageView) findViewById(R.id.product_detail_productimage_imageview);
 
+		// 处理图片
+		Bitmap bitmap = this.getIntent().getParcelableExtra(Constants.PRODUCT_DRAWABLE);
+		
+		
 		tv_product_name.setText(product_name);
 		tv_product_profit.setText(product_profit);
 		tv_product_startbuy.setText(product_startbuy);
+		product_imageview.setImageBitmap(bitmap);
 
 		
 	}
