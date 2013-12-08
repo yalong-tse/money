@@ -2,6 +2,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/splash_screen">
+    android:background="#000000" >
+
+    <!-- 启动时候的导航界面，方便导航图片轮换 -->
+
+    <com.rolling.money.utils.CustomScrollLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/splash_ScrollLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/wizard1" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/wizard2" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/wizard3" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/wizard4" >
+
+            <Button
+                android:id="@+id/splash_startBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="104dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="开始体验钱滚翻"
+                android:textColor="@color/black_25"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </com.rolling.money.utils.CustomScrollLayout>
+
+    <LinearLayout
+        android:id="@+id/splash_linelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24.0dip"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+    </LinearLayout>
 
 </RelativeLayout>

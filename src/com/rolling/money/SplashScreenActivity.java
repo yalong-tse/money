@@ -1,35 +1,101 @@
 package com.rolling.money;
 
 
+import com.rolling.money.utils.CustomScrollLayout;
+import com.rolling.money.utils.OnViewChangeListener;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Animation.AnimationListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-public class SplashScreenActivity extends Activity {
+public class SplashScreenActivity extends Activity implements OnViewChangeListener{
 
 	private final int SPLASHSCREEN_TIME = 5000;
+	
+	private CustomScrollLayout mScrollLayout;
+	private LinearLayout pointLLayout;
+	private Button startBtn;
+	private ImageView[] imgs;
+	private int count;
+	private int currentItem;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_screen);
 		
-		new Handler().postDelayed(new Runnable(){
-			
-			public void run()
-			{
+		
+		// 暂时去掉，不采用 Handle 处理
+//		new Handler().postDelayed(new Runnable(){
+//			
+//			public void run()
+//			{
+//				Intent i=new Intent(SplashScreenActivity.this,MainActivity.class);
+//				SplashScreenActivity.this.startActivity(i);
+//				SplashScreenActivity.this.finish();
+//				
+//			}
+//			
+//		}, SPLASHSCREEN_TIME);
+		
+		
+		initview();
+		
+	}
+	
+	/**
+	 * 初始化界面
+	 * */
+	private void initview()
+	{
+		this.mScrollLayout = (CustomScrollLayout) findViewById(R.id.splash_ScrollLayout);
+		this.pointLLayout = (LinearLayout) findViewById(R.id.splash_linelayout);
+		this.startBtn = (Button) findViewById(R.id.splash_startBtn);
+		count = mScrollLayout.getChildCount();
+		imgs = new ImageView[count];
+		for(int i = 0; i< count;i++) {
+			imgs[i] = (ImageView) pointLLayout.getChildAt(i);
+			imgs[i].setEnabled(true);
+			imgs[i].setTag(i);
+		}
+		currentItem = 0;
+		imgs[currentItem].setEnabled(false);
+		mScrollLayout.SetOnViewChangeListener(this);
+		
+		startBtn.setOnClickListener(onClick);
+		
+		
+		
+	}
+
+	
+	private View.OnClickListener onClick = new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.splash_startBtn:
+				mScrollLayout.setVisibility(View.GONE);
+				pointLLayout.setVisibility(View.GONE);
 				Intent i=new Intent(SplashScreenActivity.this,MainActivity.class);
 				SplashScreenActivity.this.startActivity(i);
 				SplashScreenActivity.this.finish();
-				
+				break;
 			}
-			
-		}, SPLASHSCREEN_TIME);
-	}
-
+		}
+	};
+	
+	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		return super.onTouchEvent(event);
@@ -43,4 +109,19 @@ public class SplashScreenActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public void OnViewChange(int pos) {
+		// TODO Auto-generated method stub
+		setcurrentPoint(pos);
+	}
+
+	
+	private void setcurrentPoint(int position) {
+		if(position < 0 || position > count -1 || currentItem == position) {
+			return;
+		}
+		imgs[currentItem].setEnabled(true);
+		imgs[position].setEnabled(false);
+		currentItem = position;
+	}
 }
