@@ -40,10 +40,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_vertical"
-                android:layout_marginBottom="104dp"
+                android:layout_marginBottom="114dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="开始体验钱滚翻"
+                android:text="@string/welcome_btn"
                 android:textColor="@color/black_25"
                 android:textSize="18sp" />
         </RelativeLayout>
@@ -65,6 +65,7 @@
             android:layout_gravity="center_vertical"
             android:clickable="true"
             android:padding="5.0dip"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/page_indicator_bg" />
 
         <ImageView
@@ -73,6 +74,7 @@
             android:layout_gravity="center_vertical"
             android:clickable="true"
             android:padding="5.0dip"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/page_indicator_bg" />
 
         <ImageView
@@ -81,6 +83,7 @@
             android:layout_gravity="center_vertical"
             android:clickable="true"
             android:padding="5.0dip"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/page_indicator_bg" />
 
         <ImageView
@@ -89,6 +92,7 @@
             android:layout_gravity="center_vertical"
             android:clickable="true"
             android:padding="5.0dip"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/page_indicator_bg" />
     </LinearLayout>
 

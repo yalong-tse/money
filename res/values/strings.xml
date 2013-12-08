@@ -12,6 +12,9 @@
     <string name="title_activity_splash_screen">钱滚翻</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
     <string name="settings">个人设置</string>
+    
+    <!-- 欢迎界面 -->
+    <string name="welcome_btn">开始体验钱滚翻</string>
 
     <!-- 我的资产部分 -->
     <string name="title_property">我的资产</string>
