@@ -12,7 +12,7 @@
     <string name="title_activity_splash_screen">钱滚翻</string>
     <string name="title_activity_person_info">PersonInfoActivity</string>
     <string name="settings">个人设置</string>
-    
+
     <!-- 欢迎界面 -->
     <string name="welcome_btn">开始体验钱滚翻</string>
 
@@ -65,11 +65,11 @@
     <string name="product_detail_sellstatus_value">在售</string>
     <string name="product_detail_billtype_title">投资币种</string>
     <string name="product_detail_billtype_value">人民币</string>
-	<string name="product_detail_investtpye_title">投资类型</string>
+    <string name="product_detail_investtpye_title">投资类型</string>
     <string name="product_detail_investtype_value">投资类型</string>
     <string name="product_detail_riskgrade_title">风险评级</string>
     <string name="product_detail_flowgrade_title">流动性评级</string>
-    
+
     <!-- 个人设置部分 -->
     <string name="person_bank_card">我的银行卡</string>
     <string name="person_bank_card_value">工商银行</string>
@@ -115,8 +115,7 @@
     <string name="cal_merchant">商贷</string>
     <string name="cal_publicfund">公积金贷</string>
     <string name="cal_persontax">个税</string>
-    
-    
+
     <!-- 理财资讯 -->
     <string name="new_a_title">外媒称中国RQFII配额在伦敦基金界遇冷</string>
     <string name="new_a_abstract">英国财政大臣乔治在北京向全球媒体宣布</string>
@@ -132,7 +131,6 @@
     <string name="new_f_abstract">深化改革促动市场 布局六大主题基金</string>
     <string name="new_g_title">华商价值共享</string>
     <string name="new_g_abstract">华商基金-进可攻退可守的基金</string>
-    
 
     <!-- 底部公共菜单模块 -->
     <string name="menu_bottom_1">财务分析</string>
@@ -175,12 +173,12 @@
     <string name="title_activity_cal">CalActivity</string>
     <string name="title_activity_news">NewsActivity</string>
 
-    
     <!-- 金融超市 -->
     <string name="menu_top_1">金融\n机构</string>
     <string name="menu_top_2">投资\n金额</string>
     <string name="menu_top_3">收益\n类型</string>
     <string name="menu_top_4">投资\n期限</string>
+
     <string-array name="menu_top_1">
         <item>不限</item>
         <item>中国工商银行</item>
@@ -218,8 +216,8 @@
         <item>12&#8211;24个月</item>
         <item>24个月以上</item>
     </string-array>
-    
-       <!-- dialog -->
+
+    <!-- dialog -->
     <string name="dialogTitle">联系理财经理</string>
     <string name="dialog_personname">李璐璐</string>
     <string name="dialog_personname1">认证理财师</string>
@@ -236,8 +234,8 @@
     <string name="dialog_btn_2">隐私短信留言</string>
     <string name="dialog_btn_3">在线沟通</string>
     <string name="dialog_btn_4">离线留言</string>
-
     <string name="contackmanager">联系理财经理</string>
     <string name="title_activity_dialog">DialogActivity</string>
-    
+    <string name="title_activity_collection">CollectionActivity</string>
+
 </resources>

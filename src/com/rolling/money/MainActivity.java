@@ -150,15 +150,15 @@ public class MainActivity extends Activity {
 					startActivity(intent_map);
 					
 					break;
-				// 理财计算器
+				// 循环投资
 				case 8:
 					
 					break;
-				// 
+				// 境外投资
 				case 9:
 					
 					break;
-				// 客服咨询
+				// 女士专区
 				case 10:
 					break;
 				// 理财计算器
@@ -173,8 +173,13 @@ public class MainActivity extends Activity {
 					intent_person.setClass(MainActivity.this, PersonInfoActivity.class);
 					startActivity(intent_person);
 					break;
-				// 
+				// 我的收藏
 				case 13:
+					Intent intent_collection = new Intent(MainActivity.this, CollectionActivity.class);
+					startActivity(intent_collection);
+					break;
+					// 客服咨询
+				case 14:
 					break;
 					
 				}
