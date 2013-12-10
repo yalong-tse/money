@@ -77,7 +77,7 @@
     <string name="person_account_value">xiaojing@QQ.com</string>
     <string name="person_infomation">我的资料</string>
     <string name="person_photograph">我的相册</string>
-    <string name="person_infomation_sex">性别：女</string>
+    <string name="person_infomation_sex_key">性别：女</string>
     <string name="person_infomation_email">邮箱:xiaojing@QQ.com</string>
     <string name="person_infomation_mobile">手机号：18511697605</string>
     <string name="person_infomation_city">所在城市:北京</string>

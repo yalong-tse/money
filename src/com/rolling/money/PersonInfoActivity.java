@@ -1,9 +1,14 @@
 package com.rolling.money;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.rolling.money.utils.ImageHelper;
 
 public class PersonInfoActivity extends Activity {
 
@@ -14,6 +19,13 @@ public class PersonInfoActivity extends Activity {
 		
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("∏ˆ»À…Ë÷√");
+		
+		ImageView iv1 = (ImageView)findViewById(R.id.my_profile);
+		
+		Bitmap bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.my_profile);
+		bmp = ImageHelper.getRoundedCornerBitmap(bmp, 10);
+		
+		iv1.setImageBitmap(bmp);
 		
 	}
 

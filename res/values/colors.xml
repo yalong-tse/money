@@ -69,4 +69,10 @@
 	<color name="dialog_value">#FF5c5c5c</color>
     <color name="dialog_btn1">#FF63b207</color>
     <color name="dialog_btn2">#ff37aadf</color>
+    
+    <!-- 个人设置 -->
+    <color name="bg_color">#E1E0DE</color>
+    <color name="listview_border">#BDBBB7</color>
+    <color name="layout_bg_pressed">#FF8800</color>
+    <color name="divider">#FFDDDDDD</color>
 </resources>
