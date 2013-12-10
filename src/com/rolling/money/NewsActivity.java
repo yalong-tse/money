@@ -3,6 +3,7 @@ package com.rolling.money;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class NewsActivity extends Activity {
 
@@ -10,6 +11,9 @@ public class NewsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_news);
+		
+		TextView textView = (TextView)findViewById(R.id.title);
+		textView.setText("理财资讯");
 	}
 
 	@Override
