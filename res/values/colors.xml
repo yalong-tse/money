@@ -75,4 +75,7 @@
     <color name="listview_border">#BDBBB7</color>
     <color name="layout_bg_pressed">#FF8800</color>
     <color name="divider">#FFDDDDDD</color>
+    
+    <!-- 每日推荐 -->
+    <color name="product_section">#FF4444</color>
 </resources>
