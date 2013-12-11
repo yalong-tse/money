@@ -41,8 +41,10 @@ public class RecommendActivity extends Activity {
 		data.add(new ProductEntry(R.drawable.huaxiayinhang, "金钥匙安心得利2013年第1800期人民币理财产品(36天)", "发行银行：华夏银行", "预期收益率：4.3%", "起购金额：8万"));
 		
 		data.add(new ProductSection("银行资产管理类产品"));
+		data.add(new ProductEntry(R.drawable.guangdayinhang, "颐享阳光A", "发行银行：光大银行", "预期收益率：5%", "起购金额：10万"));
 		
 		data.add(new ProductSection("信托类产品"));
+		data.add(new ProductEntry(R.drawable.fangzhengxintuo, "华门控股集合资金信托产品", "发行机构：方正信托", "预期收益率：9.8%至11.2%", "起购金额：100万"));
 		
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("每日推荐");
