@@ -22,8 +22,8 @@ public class MainActivity extends BaseBarActivity {
 	private String[] items = {
 			"金融超市","理财资讯","每日推荐","理财圈子",
 			"我的资产","风险评估","资产配置","网点查询",
-			"循环投资","境外投资","女士专区","理财计算器",
-			"个人设置","我的收藏","客服咨询"
+			"循环投资","女士专区","理财计算器","个人设置",
+			"我的收藏","客服咨询"
 			};
 	
 	private GridView gridview;
@@ -153,32 +153,28 @@ public class MainActivity extends BaseBarActivity {
 				case 8:
 					
 					break;
-				// 境外投资
-				case 9:
-					
-					break;
 				// 女士专区
-				case 10:
+				case 9:
 					break;
 				// 理财计算器
-				case 11:
+				case 10:
 					Intent intent_cal = new Intent();
 					intent_cal.setClass(MainActivity.this, CalActivity.class);
 					startActivity(intent_cal);
 					break;
 				// 个人设置
-				case 12:
+				case 11:
 					Intent intent_person = new Intent();
 					intent_person.setClass(MainActivity.this, PersonInfoActivity.class);
 					startActivity(intent_person);
 					break;
 				// 我的收藏
-				case 13:
+				case 12:
 					Intent intent_collection = new Intent(MainActivity.this, CollectionActivity.class);
 					startActivity(intent_collection);
 					break;
 					// 客服咨询
-				case 14:
+				case 13:
 					break;
 					
 				}
