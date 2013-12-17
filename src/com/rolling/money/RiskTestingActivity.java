@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class RiskTestingActivity extends Activity {
+public class RiskTestingActivity extends BaseBarActivity {
 	
 	private Spinner spinner_job;
 	private Spinner spinner_knowledge;
@@ -41,10 +41,10 @@ public class RiskTestingActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_risk_testing);
+//		setContentView(R.layout.activity_risk_testing);
 		
 		TextView textView = (TextView)findViewById(R.id.title);
-		textView.setText("∑Áœ’≤‚ ‘");
+		textView.setText("∑Áœ’∆¿π¿");
 	
 		this.spinner_age = (Spinner) findViewById(R.id.risktesting_age);
 		this.spinner_job = (Spinner) findViewById(R.id.risktesting_job);
@@ -131,6 +131,11 @@ public class RiskTestingActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.risk_testing, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_risk_testing;
 	}
 
 }

@@ -7,14 +7,14 @@
 
     <!-- 理财计算器 -->
 
+<!-- 
     <include
         android:id="@+id/title_bar"
-        layout="@layout/title" />
+        layout="@layout/title" /> -->
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_bar"
         android:fadingEdge="none" >
 
         <LinearLayout

@@ -1,19 +1,20 @@
 package com.rolling.money;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Adapter;
@@ -28,10 +29,20 @@ import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-public class ListProductActivity extends Activity {
+import com.rolling.money.ui.MtitlePopupWindow;
+import com.rolling.money.ui.MtitlePopupWindow.OnPopupWindowClickListener;
+
+public class ListProductActivity extends BaseBarActivity {
 
 	private ListView listview;
 	
+	MtitlePopupWindow mtitlePopupWindow;
+	String [] titles = {"理财类产品", "资管类产品", "信托类产品"};
+	private int screenWidth = 0; 
+    private int screenHeight = 0; 
+    private int popupWindowWidth = 0; 
+    private int popupWindowHeight = 0;
+    private int mLinearLayoutWidth = 0;
 	   
 	//生成动态数组，加入数据   
 	ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
@@ -54,11 +65,13 @@ public class ListProductActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_list_product);
+//		setContentView(R.layout.activity_list_product);
+		
+		initListProductActionBar();
 		
 		listview = (ListView) findViewById(R.id.list_product_listview);
 		TextView textView = (TextView)findViewById(R.id.title);
-		textView.setText("金融超市");
+		textView.setText(titles[0]);
 		
 		for(int i=0;i<items.length;i++)
 		{
@@ -196,6 +209,39 @@ public class ListProductActivity extends Activity {
 		
 	}
 
+	private void initListProductActionBar() {
+			//得到屏幕的宽度和高度 
+	       screenWidth = this.getWindowManager().getDefaultDisplay().getWidth(); 
+	       screenHeight = this.getWindowManager().getDefaultDisplay().getHeight(); 
+	       mTitleTextView.measure(MeasureSpec.UNSPECIFIED,MeasureSpec.UNSPECIFIED);
+//	       Log.d("title width", String.valueOf(mTitleTextView.getMeasuredWidth()));
+	       
+	       LinearLayout layout = (LinearLayout)findViewById(R.id.title_layout);
+	       ImageView image = new ImageView(this);
+	       image.setBackgroundResource(R.drawable.top_m);
+	       LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+	       params.gravity=Gravity.CENTER_VERTICAL;
+	       image.setLayoutParams(params);
+	       layout.addView(image);
+	       
+	       mLinearLayout.setOnClickListener(mLinearLayoutClick);
+			
+			mtitlePopupWindow = new MtitlePopupWindow(this);
+			mtitlePopupWindow.changeData(Arrays.asList(titles));
+			mtitlePopupWindow.setOnPopupWindowClickListener(new OnPopupWindowClickListener() {
+				@Override
+				public void onPopupWindowItemClick(int position) {
+					//你要做的事
+					mTitleTextView.setText(titles[position]);
+//					Toast.makeText(getApplication(), items[position], Toast.LENGTH_SHORT).show();
+				}
+			});
+			popupWindowHeight = mtitlePopupWindow.getHeight(); 
+		    popupWindowWidth = mtitlePopupWindow.getWidth(); 	
+	       
+	       
+	}
+
 	private void initiatePopupWindow(View view, final TextView menu_top, int popup_array, final int menu_top_string) {
 		try {
 			
@@ -266,5 +312,17 @@ public class ListProductActivity extends Activity {
 		getMenuInflater().inflate(R.menu.list_product, menu);
 		return true;
 	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_list_product;
+	}
+	
+	private OnClickListener mLinearLayoutClick = new OnClickListener() {
+		public void onClick(View v) {
+			mLinearLayoutWidth = mLinearLayout.getWidth();
+			mtitlePopupWindow.showAsDropDown(v,(mLinearLayoutWidth-popupWindowWidth)/2,0);
+		}
+	};
 
 }

@@ -6,15 +6,14 @@
    android:background="@drawable/android_layout_bg"
     tools:context=".MainActivity" >
     
-    <!-- 顶部标题 -->
-	<include android:id="@+id/title_bar" layout="@layout/title" />
+    <!-- 顶部标题, 使用custom actionbar替换 -->
+	<!-- <include android:id="@+id/title_bar" layout="@layout/title" /> -->
 	<!-- 底部菜单 -->
 	<include android:id="@+id/bottommenu" layout="@layout/common_bottommenu" />
 	
     <LinearLayout android:orientation="vertical" 
         android:gravity="center"
         android:layout_above="@id/bottommenu"
-		android:layout_below="@id/title_bar" 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >

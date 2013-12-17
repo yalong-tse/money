@@ -8,10 +8,10 @@
     tools:context=".PersonInfoActivity" >
 
     <!-- 个人设置 -->
-
+	<!-- 
     <include
         android:id="@+id/title_bar"
-        layout="@layout/title" />
+        layout="@layout/title" /> -->
 
     <ScrollView
         android:id="@+id/risktesting_srollview"

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 
+    <ListView
+        android:id="@+id/popupwindow"
+        android:background="@drawable/mm_title_functionframe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/mm_title_functionframe_line"
+        android:listSelector="@drawable/mm_title_functionframe_pressed"
+        android:cacheColorHint="@android:color/transparent">
+    </ListView>
+     -->
+     <ListView
+        android:id="@+id/popupwindow"
+        android:background="@drawable/pop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/tccd_g"
+        android:listSelector="@drawable/btn_pressed"
+        android:cacheColorHint="@android:color/transparent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+    </ListView>
+</RelativeLayout>

@@ -9,7 +9,7 @@
 
     <!-- top title -->
 
-	<include android:id="@+id/title_bar" layout="@layout/title" />
+	<!-- <include android:id="@+id/title_bar" layout="@layout/title" /> -->
     
     <ScrollView
         android:id="@+id/risktesting_srollview"

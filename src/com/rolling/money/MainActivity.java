@@ -4,18 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
-import android.widget.SimpleAdapter; 
+import android.widget.SimpleAdapter;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseBarActivity {
 	
 	// Gridview 中的菜单
 	private List<HashMap<String,Object>> menuitems = new ArrayList<HashMap<String,Object>>();
@@ -32,7 +31,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+//		setContentView(R.layout.activity_main);
 		gridview = (GridView) findViewById(R.id.main_gridview);
 		
 		for(int i=0;i<items.length;i++)
@@ -103,7 +102,7 @@ public class MainActivity extends Activity {
 					intent_product.setClass(MainActivity.this, ListProductActivity.class);
 					startActivity(intent_product);
 					break;
-				// 理财咨询
+				// 理财资讯
 				case 1:
 					Intent intent_news = new Intent();
 					intent_news.setClass(MainActivity.this, NewsActivity.class);
@@ -195,6 +194,11 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_main;
 	}
 
 }

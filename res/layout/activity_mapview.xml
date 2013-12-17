@@ -6,9 +6,9 @@
 
     <!-- 个人设置 -->
 
-    <include
+    <!-- <include
         android:id="@+id/title_bar"
-        layout="@layout/title" />
+        layout="@layout/title" /> -->
 
     <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapsView"

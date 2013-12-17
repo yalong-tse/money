@@ -5,12 +5,12 @@ import android.app.Activity;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class NewsActivity extends Activity {
+public class NewsActivity extends BaseBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_news);
+//		setContentView(R.layout.activity_news);
 		
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("理财资讯");
@@ -21,6 +21,11 @@ public class NewsActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.news, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_news;
 	}
 
 }

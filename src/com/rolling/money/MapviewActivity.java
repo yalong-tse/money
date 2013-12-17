@@ -1,9 +1,13 @@
 package com.rolling.money;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.MKGeneralListener;
-import com.baidu.platform.comapi.basestruct.GeoPoint;
-import com.baidu.mapapi.map.MKEvent;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.search.MKAddrInfo;
 import com.baidu.mapapi.search.MKBusLineResult;
@@ -16,14 +20,9 @@ import com.baidu.mapapi.search.MKShareUrlResult;
 import com.baidu.mapapi.search.MKSuggestionResult;
 import com.baidu.mapapi.search.MKTransitRouteResult;
 import com.baidu.mapapi.search.MKWalkingRouteResult;
-import android.os.Bundle;
-import android.app.Activity;
-import android.util.Log;
-import android.view.Menu;
-import android.widget.TextView;
-import android.widget.Toast;
+import com.baidu.platform.comapi.basestruct.GeoPoint;
 
-public class MapviewActivity extends Activity {
+public class MapviewActivity extends BaseBarActivity {
 
 	//private BMapManager mBMapMan;
 
@@ -50,7 +49,7 @@ public class MapviewActivity extends Activity {
 		//mBMapMan.init("205114502786B06C4C95CEB0F55822F25E46AED2", new MyGeneralListener());
 		
         //Log.d("mapview", "1111111111");
-		setContentView(R.layout.activity_mapview);
+//		setContentView(R.layout.activity_mapview);
 		mMapView = (MapView) findViewById(R.id.bmapsView);
 		TextView textView = (TextView) findViewById(R.id.title);
 		textView.setText("Íøµã²éÑ¯");
@@ -273,6 +272,12 @@ public class MapviewActivity extends Activity {
 			
 		}
 
+	}
+
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_mapview;
 	}
 
 }

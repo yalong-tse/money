@@ -23,14 +23,14 @@ import com.rolling.money.data.ProductAdapter;
 import com.rolling.money.data.ProductEntry;
 import com.rolling.money.data.ProductSection;
 
-public class RecommendActivity extends Activity {
+public class RecommendActivity extends BaseBarActivity {
 
 	ListView listview;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_recommend);
+//		setContentView(R.layout.activity_recommend);
 		
 		List<IProduct> data = new ArrayList<IProduct>();
 		data.add(new ProductSection("银行理财产品"));
@@ -107,6 +107,11 @@ public class RecommendActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.recommend, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_recommend;
 	}
 
 }

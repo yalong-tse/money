@@ -6,8 +6,8 @@
     android:background="@drawable/android_layout_bg"
     tools:context=".ListProductActivity" >
 
-    <include android:id="@+id/title_bar" 
-        layout="@layout/title" android:layout_alignParentTop="true"/>
+    <!-- <include android:id="@+id/title_bar" 
+        layout="@layout/title" android:layout_alignParentTop="true"/> -->
     
     <ListView android:id="@+id/list_mycollection"
         android:layout_width="fill_parent"

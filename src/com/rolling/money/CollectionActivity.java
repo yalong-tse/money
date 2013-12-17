@@ -23,7 +23,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-public class CollectionActivity extends Activity {
+public class CollectionActivity extends BaseBarActivity {
 
 	ListView listview;
 	
@@ -31,7 +31,7 @@ public class CollectionActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_collection);
+//		setContentView(R.layout.activity_collection);
 		
 		List<IProduct> data = new ArrayList<IProduct>();
 		data.add(new ProductSection("银行理财产品"));
@@ -103,6 +103,11 @@ public class CollectionActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.collection, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_collection;
 	}
 
 }

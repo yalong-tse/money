@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import com.rolling.money.utils.ImageHelper;
 
-public class PersonInfoActivity extends Activity {
+public class PersonInfoActivity extends BaseBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_person_info);
+//		setContentView(R.layout.activity_person_info);
 		
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("∏ˆ»À…Ë÷√");
@@ -34,6 +34,11 @@ public class PersonInfoActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.person_info, menu);
 		return true;
+	}
+
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_person_info;
 	}
 
 }
