@@ -78,4 +78,11 @@
     
     <!-- 每日推荐 -->
     <color name="product_section">#FF4444</color>
+    
+    <!-- 金融超市 -->
+    <color name="listview_item_1">#848484</color>
+    <color name="listview_item_bottom_left">#FF7800</color>
+    <color name="listview_item_bottom_right">#3988e5</color>
+    <color name="product_detail_red">#ef0000</color>
+    <color name="product_detail_gray">#9e9e9e</color>
 </resources>

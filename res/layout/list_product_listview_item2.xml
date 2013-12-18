@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+
+    <!-- 第一列：发行机构，星级，收益率 -->
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/item_left"
+        android:padding="5dp"
+        android:orientation="vertical">
+        
+        <ImageView android:id="@+id/item_bankIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/zhaoshangyinhang"
+                android:layout_gravity="center"
+                />
+        
+        <RatingBar 
+            android:id="@+id/item_ratingBar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:numStars="5"
+	        android:rating="5"
+	        android:isIndicator="true"
+	        style="@style/myRatingBar2"
+	        />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_gravity="center_horizontal">
+        <TextView android:id="@+id/item_profit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6.50"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|bottom"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="13sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 第二列 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_left"
+        android:paddingTop="5dp"
+        android:layout_marginRight="5dp">
+        
+        <!-- 第一行：投资时间、24天、预售、5万 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" 
+        	android:gravity="bottom|center_vertical">
+            
+            <!-- 2013/6/24~2013/7/5 -->
+            <TextView android:id="@+id/item_investperiod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2013/6/24~2013/7/5"
+                android:textColor="@color/listview_item_1"
+                android:textSize="12sp"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/listview_item_1"
+                android:textSize="12sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"/>
+            
+            <!-- 24天 -->
+            <ImageView 
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/yhlccp_dot"
+                android:layout_gravity="center"
+                />
+            <TextView android:id="@+id/item_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24天"
+                android:textColor="@color/listview_item_1"
+                android:textSize="12sp"
+                android:paddingRight="5dp"/>
+            
+            <!-- 预售 -->
+            <ImageView 
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/yhlccp_dot_o"
+                android:layout_gravity="center"
+                />
+            <TextView android:id="@+id/item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预售"
+                android:textColor="@color/listview_item_1"
+                android:textSize="12sp"
+                android:paddingRight="5dp"/>
+            
+            
+            <!-- 5万 -->
+            <ImageView 
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/yhlccp_dot_r"
+                android:layout_gravity="center"
+                />
+            <TextView android:id="@+id/item_startmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5万"
+                android:textColor="@color/listview_item_1"
+                android:textSize="12sp"
+                android:paddingRight="5dp"/>
+            
+        </LinearLayout>
+        
+        <!-- 第二行：发行机构、产品名称 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	>
+            
+            <!-- 
+            <ImageView 
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/zhaoshangyinhang"
+                android:layout_gravity="center"
+                /> -->
+            
+            <!-- 产品名称 -->
+            <TextView android:id="@+id/item_productitem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汇丰中国 | 汇享天下—一年期人民币结构性投资产品(2013年第77期)"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                />
+            
+            
+        </LinearLayout>
+        
+        <!-- 第三行：保本浮动收益、25人关注 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:gravity="bottom|center_vertical" >
+            
+            <TextView android:id="@+id/item_productType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保本浮动收益"
+                android:textColor="@color/listview_item_bottom_left"
+                android:textSize="14sp"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/listview_item_1"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"/>
+            
+            <TextView android:id="@+id/item_attentionPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25人关注"
+                android:textColor="@color/listview_item_bottom_right"
+                android:textSize="14sp"/>
+            
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <!-- 
+    <ImageView
+        android:id="@+id/list_product_more_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/list_product_imageview_content"
+        android:src="@drawable/ic_arrow" /> -->
+
+</RelativeLayout>

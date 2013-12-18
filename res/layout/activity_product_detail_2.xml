@@ -1,0 +1,530 @@
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    tools:context=".ProductDetailActivity" > -->
+
+    <!-- 产品详情界面 -->
+    <ScrollView
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/product_detail_scrollview"
+         android:layout_width="fill_parent"
+         android:background="@drawable/android_layout_bg"
+         android:layout_height="fill_parent"
+         android:fillViewport="true"
+         android:fadingEdge="none">
+
+	        <LinearLayout
+	            android:id="@+id/product_detail_layout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" 
+	            android:background="@color/bg_color">
+            
+            
+	            
+	            <!-- 产品详情，貌似不太好，以后尝试改用TableLayout -->
+	            <!-- ***********3 start*********** -->
+	            <LinearLayout 
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_marginTop="10dp"
+			    	android:layout_marginLeft="10dp"
+			    	android:layout_marginRight="10dp"
+			    	android:orientation="vertical"
+			    	android:background="@drawable/bg_layerlist">
+		    	
+                <!-- 发行机构、产品名称、银行图标、星级、起购金额、委托期、理财经理等 -->
+                <!-- ********2 start******* -->
+                <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/layout_clickable_bg_1"
+		            android:paddingBottom="5dp"
+		            android:paddingLeft="10dp"
+		            android:paddingTop="5dp" 
+		            android:orientation="horizontal">
+		            
+                    <!-- ********1 start******* -->
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="4"
+                        >
+                        
+                        <LinearLayout 
+                            android:layout_width="match_parent"
+                        	android:layout_height="wrap_content"
+                       		android:orientation="horizontal">
+                       		
+		                    <ImageView
+		                        android:id="@+id/product_detail_bankicon"
+		                        android:layout_width="30dp"
+		                        android:layout_height="30dp"
+		                        />
+                       		
+	                        <TextView android:id="@+id/product_detail_issuer"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="中信银行"
+	                            android:textSize="22sp" 
+	                            />
+	                        
+	                        <RatingBar android:id="@+id/product_detail_ratingbar"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:numStars="5"
+	                            android:layout_marginLeft="5dp"
+	                            android:isIndicator="true"
+	                            android:layout_gravity="center_vertical"
+	        					style="@style/myRatingBar2"/>
+                        </LinearLayout>
+                        
+                        <TextView 
+                            android:id="@+id/product_detail_productitem" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产品名称"
+                            />
+                        
+                    </LinearLayout>
+                    <!-- ********1 end******* -->
+                    
+                    <ImageView 
+			            android:id="@+id/my_profile_licaishi"
+			            android:src="@drawable/person_profile"
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:layout_gravity="top|center_vertical"
+			            android:layout_marginRight="5dp"
+				        />
+		            
+		        </LinearLayout>
+                <!-- ********2 end******* -->
+                
+                <!-- 来根儿横线吧 -->
+                <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:layout_marginLeft="12dp"
+			        android:layout_marginRight="12dp"
+			        android:background="@color/divider"/>
+                
+                <!-- ********4 start******* -->
+                <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/layout_clickable_bg_1"
+		            android:paddingBottom="5dp"
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:orientation="horizontal">
+                    
+                    <LinearLayout 
+                        android:paddingTop="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <LinearLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal">
+                        
+	                        <TextView android:id="@+id/product_detail_profit"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_gravity="center_horizontal|bottom"
+	                            android:textSize="17sp"
+	                            android:textStyle="bold"
+	                            android:textColor="@color/product_detail_red"/>
+	                        
+	                        <TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_gravity="bottom"
+	                            android:text="%"
+	                            android:textSize="13sp"
+	                            android:textColor="@color/product_detail_red"/>
+                        
+                        </LinearLayout>
+                        
+                        <TextView android:id="@+id/product_detail_producttype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/product_detail_gray"
+                            />
+                        
+                    </LinearLayout>
+                    
+                    <!-- 来跟竖线吧 -->
+                    <View 
+				        android:layout_width="1dp"
+				        android:layout_height="match_parent"
+				        android:layout_marginBottom="5dp"
+				        android:background="@color/divider"/>
+                    
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:orientation="vertical">
+                        
+                        <TextView android:id="@+id/product_detail_startmoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/product_detail_red"/>
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="起购金额"
+                            android:textSize="13sp"
+                            android:textColor="@color/product_detail_gray"
+                            />
+                        
+                    </LinearLayout>
+                    <!-- 来跟竖线吧 -->
+                    <View 
+				        android:layout_width="1dp"
+				        android:layout_height="match_parent"
+				        android:layout_marginBottom="5dp"
+				        android:background="@color/divider"/>
+                    
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <TextView android:id="@+id/product_detail_period"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/product_detail_red"/>
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="委托期"
+                            android:textSize="13sp"
+                            android:textColor="@color/product_detail_gray"
+                            />
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                <!-- ********4 end******* -->
+                
+		    </LinearLayout>
+		    <!-- ***********3 end*********** -->
+
+			<LinearLayout 
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_marginTop="10dp"
+			    	android:layout_marginLeft="10dp"
+			    	android:layout_marginRight="10dp"
+			    	android:orientation="vertical"
+			    	android:background="@drawable/bg_layerlist">
+                <!-- 发售期 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_1"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/fashouqi"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_buydate" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/fashouqi"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="发售期"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <TextView 
+			            android:id="@+id/product_detail_investperiod"
+			            android:layout_toLeftOf="@+id/arrow1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:textColor="@color/product_detail_red"
+			            />
+			        
+			        <ImageView 
+			            android:id="@+id/arrow1"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />"
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 委托期 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_3"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/weituoqi"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_weituo" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/weituoqi"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="委托期"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <TextView 
+			            android:id="@+id/product_detail_weituo"
+			            android:layout_toLeftOf="@+id/arrow2"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:text="2013-12-01至2014-12-01"
+			            android:textColor="@color/product_detail_red"
+			            />
+			        
+			        <ImageView 
+			            android:id="@+id/arrow2"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+            </LinearLayout>
+            
+			
+			<LinearLayout 
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_marginTop="10dp"
+			    	android:layout_marginLeft="10dp"
+			    	android:layout_marginRight="10dp"
+			    	android:orientation="vertical"
+			    	android:background="@drawable/bg_layerlist">
+                <!-- 风险等级 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_1"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/fengxian"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_fengxian" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/fengxian"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="风险等级"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <RatingBar
+			            android:layout_toLeftOf="@+id/arrow3_1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:numStars="4"
+	                    android:rating="4"
+	                    android:layout_marginLeft="5dp"
+	                    android:isIndicator="true"
+	                    android:layout_centerVertical="true"
+	        			style="@style/myRatingBar2"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_1"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 流动性等级 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_4"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/liudongxing"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_liudongxing" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/liudongxing"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="流动性等级"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <RatingBar
+			            android:layout_toLeftOf="@+id/arrow3_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:numStars="2"
+	                    android:rating="2"
+	                    android:layout_marginLeft="5dp"
+	                    android:isIndicator="true"
+	                    android:layout_centerVertical="true"
+	        			style="@style/myRatingBar2"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_2"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 产品指标分析 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_3"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/chanpinzhibiao"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_chanpinzhibiao" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/chanpinzhibiao"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="产品指标分析"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <RatingBar
+			            android:layout_toLeftOf="@+id/arrow3_3"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:numStars="3"
+	                    android:rating="3"
+	                    android:layout_marginLeft="5dp"
+	                    android:isIndicator="true"
+	                    android:layout_centerVertical="true"
+	        			style="@style/myRatingBar2"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_3"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+            </LinearLayout>
+            
+            <com.rolling.money.utils.CustomGridview
+                android:id="@+id/product_detail_btngroups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </com.rolling.money.utils.CustomGridview>
+        </LinearLayout>
+    </ScrollView>
+
+<!-- </RelativeLayout> -->

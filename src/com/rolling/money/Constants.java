@@ -2,20 +2,15 @@ package com.rolling.money;
 
 public class Constants {
 	
-	// 产品名称
-	public static final String PRODUCT_NAME = "product_name";
-	// 产品收益
-	public static final String PRODUCT_PROFIT = "product_profit";
-	// 起购金额
-	public static final String PRODUCT_START_BUY = "product_start_buy";
-	
-	// 产品详情
+	public static final String ITEM_RATINGBAR = "item_ratingbar";
+	public static final String ITEM_PROFIT = "item_profit";
+	public static final String ITEM_INVESTPERIOD = "item_investperiod";
+	public static final String ITEM_PERIOD = "item_period";
+	public static final String ITEM_TYPE = "item_type";
+	public static final String ITEM_STARTMONEY = "item_startmoney";
+	public static final String ITEM_PRODUCTITEM = "item_productitem";
+	public static final String ITEM_PRODUCTTYPE = "item_productType";
+	public static final String ITEM_ATTENTIONPEOPLE = "item_attentionPeople";
+	public static final String ITEM_BANKICON = "item_bankicon";
 	public static final String PRODUCT_DETAIL = "product_detail";
-	
-	// 产品银行
-	public static final String PRODUCT_BANK_NAME = "bank_name";
-	
-	// 产品图标
-	public static final String PRODUCT_DRAWABLE = "product_drawable";
-
 }

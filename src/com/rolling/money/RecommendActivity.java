@@ -83,16 +83,16 @@ public class RecommendActivity extends BaseBarActivity {
 				
 				Bundle product_bundle = new Bundle();
 				
-				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
-				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
-				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
-				product_bundle.putString(Constants.PRODUCT_BANK_NAME, product_detail.substring(product_detail.indexOf("£º")+1));
-				
+//				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
+//				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
+//				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
+//				product_bundle.putString(Constants.PRODUCT_BANK_NAME, product_detail.substring(product_detail.indexOf("£º")+1));
+//				
 				
 				Intent product_detail_intent = new Intent();
 				product_detail_intent.putExtra(Constants.PRODUCT_DETAIL,product_bundle);
 				
-				product_detail_intent.putExtra(Constants.PRODUCT_DRAWABLE, obmp);
+//				product_detail_intent.putExtra(Constants.PRODUCT_DRAWABLE, obmp);
 				
 				product_detail_intent.setClass(RecommendActivity.this, ProductDetailActivity.class);
 				startActivity(product_detail_intent);

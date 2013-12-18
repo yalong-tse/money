@@ -76,7 +76,7 @@
 	                    android:numStars="5"
 	                    android:rating="5"
 	                    android:isIndicator="true"
-	      				style="@style/myRatingBar"  
+	      				style="@style/myRatingBar2"  
 	                     />
 	
 	                <TextView

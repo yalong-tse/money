@@ -2,7 +2,7 @@ package com.rolling.money;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,9 +26,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.SimpleAdapter;
+import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.rolling.money.data.IProduct;
+import com.rolling.money.data.ProductAdapter2;
+import com.rolling.money.data.ProductEntry2;
 import com.rolling.money.ui.MtitlePopupWindow;
 import com.rolling.money.ui.MtitlePopupWindow.OnPopupWindowClickListener;
 
@@ -43,18 +47,6 @@ public class ListProductActivity extends BaseBarActivity {
     private int popupWindowWidth = 0; 
     private int popupWindowHeight = 0;
     private int mLinearLayoutWidth = 0;
-	   
-	//生成动态数组，加入数据   
-	ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
-	
-	String[] productitems={"乾元—尊享型2013年第12期理财产品(55天)","心喜系列2013年第46期人民币组合投资型非保本理财产品(182天)","本无忧系列2013年第46期美元银行间保证收益理财产品(365天)",
-			"汇通理财2013年惠添利2449号理财产品(365天)","中银稳富ZYWFSH042013097(170天)人民币理财计划","高净值客户专属240天增利人民币理财产品(ZL240D02)",
-			"鑫意理财福通2013079期人民币理财产品(92天)","招银进宝之鼎鼎成金10015号理财计划(90天)","金钥匙安心得利2013年第1800期人民币理财产品(36天)",
-			"平安财富-私行专享尊贵组合A资产管理类2013年30期人民币理财产品"};
-	String[] items = {"光大银行","中国银行","建设银行","农业银行","招商银行","交通银行","工商银行","华夏银行"};
-	String[] profits = {"3.5%","4.5%","2.8%","3.5%","4.3%","6.5%","4.6%","4.3%"};
-	String[] startmoney = {"1万","2万","3万","4万","5万","6万","7万","8万"};
-	
 	// topmenu 查询区域
 	TextView menu_top1, menu_top2, menu_top3, menu_top4;
 	LinearLayout layout1, layout2, layout3, layout4;
@@ -69,66 +61,21 @@ public class ListProductActivity extends BaseBarActivity {
 		
 		initListProductActionBar();
 		
-		listview = (ListView) findViewById(R.id.list_product_listview);
+		List<IProduct> data = new ArrayList<IProduct>();
+		data.add(new ProductEntry2(5F,"3.5", "2013/7/10~2013/7/30", "12个月","预售", "3万", R.drawable.guangdayinhang,"光大银行 | 乾元—尊享型2013年第12期理财产品(55天)", "保本浮动收益" , "25人关注"));
+		data.add(new ProductEntry2(4.5F,"3.5", "2013/6/24~2013/7/5", "24天","预售", "5万", R.drawable.zhaoshangyinhang, "招商银行 | 中银稳富ZYWFSH042013097(170天)人民币理财计划", "非保本浮动收益", "25人关注"));
+		data.add(new ProductEntry2(5F,"6", "2013/9/24~2013/10/5", "11天","预售", "10万", R.drawable.jiaotongyinhang, "交通银行 | 高净值客户专属240天增利人民币理财产品(ZL240D02)", "非保本浮动收益", "300人关注"));
+		data.add(new ProductEntry2(5F,"4.5", "2013/6/24~2013/7/5", "24个月","预售", "5万", R.drawable.gongshangyinhang, "工商银行 | 招银进宝之鼎鼎成金10015号理财计划(90天)", "保本浮动收益",  "30人关注"));
+		data.add(new ProductEntry2(4F,"5", "2013/6/24~2013/7/5", "6个月","预售", "5万", R.drawable.huaxiayinhang, "华夏银行 | 金钥匙安心得利2013年第1800期人民币理财产品(36天)", "保本浮动收益", "24人关注"));
+		
 		TextView textView = (TextView)findViewById(R.id.title);
-		textView.setText(titles[0]);
+		textView.setText("理财类产品");
 		
-		for(int i=0;i<items.length;i++)
-		{
-			HashMap<String,Object> map = new HashMap<String,Object>();
-			if(items[i].equalsIgnoreCase("光大银行"))
-			{
-				map.put("ItemImage", R.drawable.guangdayinhang);
-			}
-			else if(items[i].equalsIgnoreCase("中国银行"))
-			{
-				map.put("ItemImage", R.drawable.zhaoshangyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("建设银行"))
-			{
-				map.put("ItemImage", R.drawable.jiansheyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("农业银行"))
-			{
-				map.put("ItemImage", R.drawable.nongyeyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("招商银行"))
-			{
-				map.put("ItemImage", R.drawable.zhaoshangyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("交通银行"))
-			{
-				map.put("ItemImage", R.drawable.jiaotongyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("工商银行"))
-			{
-				map.put("ItemImage", R.drawable.gongshangyinhang);
-			}
-			else if(items[i].equalsIgnoreCase("华夏银行"))
-			{
-				map.put("ItemImage", R.drawable.huaxiayinhang);
-			}
-			
-			map.put("ItemText", productitems[i]);
-			map.put("ItemDetail", "发行银行：" + items[i]);
-			map.put("profit","预期收益率：" +  profits[i]);
-			map.put("startmoney", "起够金额：" + startmoney[i]);
-			map.put("moreImage", R.drawable.ic_arrow);
-			listItem.add(map);
-		}
+		listview = (ListView)findViewById(R.id.list_product_listview);
 		
+		ProductAdapter2 adapter = new ProductAdapter2(this, data);
 		
-		SimpleAdapter listAdapter = new SimpleAdapter(this,listItem,R.layout.list_product_listview_item,
-				new String[]{"ItemImage","ItemText","ItemDetail","profit","startmoney","moreImage"},
-				new int[]{R.id.list_product_listview_imageview,
-				R.id.list_product_listview_textview_title,
-				R.id.list_product_listview_textview_detail,
-				R.id.list_product_listview_textview_profit,
-				R.id.list_product_listview_textview_startmoney,
-				R.id.list_product_more_image});
-		
-		
-		listview.setAdapter(listAdapter);
+		listview.setAdapter(adapter);
 		
 		
 		// 选择条目打开详情界面
@@ -138,34 +85,41 @@ public class ListProductActivity extends BaseBarActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				
-				LinearLayout line_layout = (LinearLayout) view;
-				TextView tv_productname = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_title);
-				TextView tv_productprofit = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_profit);
-				TextView tv_productstartbuy = (TextView) line_layout.findViewById(R.id.list_product_listview_textview_startmoney);
-				ImageView iv_titleimage = (ImageView) line_layout.findViewById(R.id.list_product_listview_imageview);
+				RelativeLayout item = (RelativeLayout) view;
+				
+				// 获取每一个listview的值
+				ImageView item_bankIcon = (ImageView) item.findViewById(R.id.item_bankIcon);
+				RatingBar item_ratingbar = (RatingBar) item.findViewById(R.id.item_ratingBar);
+				TextView item_profit = (TextView) item.findViewById(R.id.item_profit);
+				TextView item_investperiod = (TextView) item.findViewById(R.id.item_investperiod);
+				TextView item_period = (TextView) item.findViewById(R.id.item_period);
+				TextView item_type = (TextView) item.findViewById(R.id.item_type);
+				TextView item_startmoney = (TextView) item.findViewById(R.id.item_startmoney);
+				TextView item_productitem = (TextView) item.findViewById(R.id.item_productitem);
+				TextView item_productType = (TextView) item.findViewById(R.id.item_productType);
+				TextView item_attentionPeople = (TextView) item.findViewById(R.id.item_attentionPeople);
+								
 				 
 				// 传递参数
-				String product_name = (String) tv_productname.getText();
-				String product_profit = (String) tv_productprofit.getText();
-				String product_startbuy = (String) tv_productstartbuy.getText();
-				//Drawable drawable1 = iv_titleimage.getDrawable();
-				
-				iv_titleimage.setDrawingCacheEnabled(true);
-				Bitmap obmp = Bitmap.createBitmap(iv_titleimage.getDrawingCache());
-				iv_titleimage.setDrawingCacheEnabled(false);
+				item_bankIcon.setDrawingCacheEnabled(true);
+				Bitmap obmp = Bitmap.createBitmap(item_bankIcon.getDrawingCache());
+				item_bankIcon.setDrawingCacheEnabled(false);
 				
 				Bundle product_bundle = new Bundle();
 				
-				product_bundle.putString(Constants.PRODUCT_NAME, product_name);
-				product_bundle.putString(Constants.PRODUCT_PROFIT, product_profit);
-				product_bundle.putString(Constants.PRODUCT_START_BUY, product_startbuy);
-				product_bundle.putString(Constants.PRODUCT_BANK_NAME, items[position]);
-				
+				product_bundle.putFloat(Constants.ITEM_RATINGBAR, item_ratingbar.getRating());
+				product_bundle.putString(Constants.ITEM_PROFIT, item_profit.getText().toString());
+				product_bundle.putString(Constants.ITEM_INVESTPERIOD, item_investperiod.getText().toString());
+				product_bundle.putString(Constants.ITEM_PERIOD, item_period.getText().toString());
+				product_bundle.putString(Constants.ITEM_TYPE, item_type.getText().toString());
+				product_bundle.putString(Constants.ITEM_STARTMONEY, item_startmoney.getText().toString());
+				product_bundle.putString(Constants.ITEM_PRODUCTITEM, item_productitem.getText().toString());
+				product_bundle.putString(Constants.ITEM_PRODUCTTYPE, item_productType.getText().toString());
+				product_bundle.putString(Constants.ITEM_ATTENTIONPEOPLE, item_attentionPeople.getText().toString());
 				
 				Intent product_detail_intent = new Intent();
 				product_detail_intent.putExtra(Constants.PRODUCT_DETAIL,product_bundle);
-				
-				product_detail_intent.putExtra(Constants.PRODUCT_DRAWABLE, obmp);
+				product_detail_intent.putExtra(Constants.ITEM_BANKICON, obmp);
 				
 				product_detail_intent.setClass(ListProductActivity.this, ProductDetailActivity.class);
 				startActivity(product_detail_intent);
@@ -231,7 +185,6 @@ public class ListProductActivity extends BaseBarActivity {
 			mtitlePopupWindow.setOnPopupWindowClickListener(new OnPopupWindowClickListener() {
 				@Override
 				public void onPopupWindowItemClick(int position) {
-					//你要做的事
 					mTitleTextView.setText(titles[position]);
 //					Toast.makeText(getApplication(), items[position], Toast.LENGTH_SHORT).show();
 				}

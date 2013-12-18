@@ -2,37 +2,27 @@ package com.rolling.money;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-import com.rolling.money.utils.CustomGridview;
-
-import android.os.Bundle;
-import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.RatingBar;
+import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-public class ProductDetailActivity extends Activity {
+import com.rolling.money.utils.CustomGridview;
+import com.rolling.money.utils.ImageHelper;
+
+public class ProductDetailActivity extends BaseBarActivity {
 
 	// 生成动态数组，加入数据
 	ArrayList<HashMap<String, Object>> menuitems = new ArrayList<HashMap<String, Object>>();
-
-	String[] productitems = { "乾元—尊享型2013年第12期理财产品(55天)",
-			"心喜系列2013年第46期人民币组合投资型非保本理财产品(182天)",
-			"本无忧系列2013年第46期美元银行间保证收益理财产品(365天)", "汇通理财2013年惠添利2449号理财产品(365天)",
-			"中银稳富ZYWFSH042013097(170天)人民币理财计划",
-			"高净值客户专属240天增利人民币理财产品(ZL240D02)", "鑫意理财福通2013079期人民币理财产品(92天)",
-			"招银进宝之鼎鼎成金10015号理财计划(90天)", "金钥匙安心得利2013年第1800期人民币理财产品(36天)",
-			"平安财富-私行专享尊贵组合A资产管理类2013年30期人民币理财产品" };
-	String[] items = { "光大银行", "中国银行", "建设银行", "农业银行", "招商银行", "平安银行", "工商银行",
-			"华夏银行" };
-	String[] profits = { "3.5%", "4.5%", "2.8%", "3.5%", "4.3%", "6.5%",
-			"4.6%", "4.3%" };
-	String[] startmoney = { "1万", "2万", "3万", "4万", "5万", "6万", "7万", "8万" };
-	
 
 	private String[] items_fun = {"加入收藏","预约购买","网点查询","产品解读","关联产品","同行产品","用户评论","理财计算器"};
 
@@ -40,42 +30,59 @@ public class ProductDetailActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_product_detail);
+//		setContentView(R.layout.activity_product_detail);
 
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("产品详情");
 		
+		ImageView licaishi = (ImageView) findViewById(R.id.my_profile_licaishi);
+		Bitmap bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.person_profile);
+		bmp = ImageHelper.getRoundedCornerBitmap(bmp, 10);
+		
+		licaishi.setImageBitmap(bmp);
+		licaishi.setOnClickListener(licaishiClickListener);
+		
+		final ScrollView scroll = (ScrollView) findViewById(R.id.product_detail_scrollview);
+		
+		// http://stackoverflow.com/questions/4119441/how-to-scroll-to-top-of-long-scrollview-layout
+		scroll.smoothScrollTo(0,0);  // 必须要有这句话，fullScroll(ScrollView.FOCUS_UP)是不起作用的；否则scrollview默认会显示在gridview的顶部
 		
 		// 处理列表界面传递过来的参数
 		Bundle bundle = this.getIntent().getBundleExtra(Constants.PRODUCT_DETAIL);
-		String product_name = bundle.getString(Constants.PRODUCT_NAME);
-		String product_profit = bundle.getString(Constants.PRODUCT_PROFIT);
-		String product_startbuy = bundle.getString(Constants.PRODUCT_START_BUY);
-		String bank_name = bundle.getString(Constants.PRODUCT_BANK_NAME);
+		float item_ratingbar = bundle.getFloat(Constants.ITEM_RATINGBAR);
+		String item_profit = bundle.getString(Constants.ITEM_PROFIT);
+		String item_investperiod = bundle.getString(Constants.ITEM_INVESTPERIOD);
+		String item_period = bundle.getString(Constants.ITEM_PERIOD);
+		String item_type = bundle.getString(Constants.ITEM_TYPE);
+		String item_startmoney = bundle.getString(Constants.ITEM_STARTMONEY);
+		String item_productitem = bundle.getString(Constants.ITEM_PRODUCTITEM);
+		String item_productType = bundle.getString(Constants.ITEM_PRODUCTTYPE);
+		String item_attentionPeople = bundle.getString(Constants.ITEM_ATTENTIONPEOPLE);
 		
-
-		TextView tv_product_name = (TextView) findViewById(R.id.product_detail_name_textview);
-		TextView tv_product_profit = (TextView) findViewById(R.id.product_detail_profit_value);
-		TextView tv_product_startbuy = (TextView) findViewById(R.id.product_detail_start_value);
-		ImageView product_imageview = (ImageView) findViewById(R.id.product_detail_productimage_imageview);
-		TextView tv_bankname = (TextView) findViewById(R.id.product_detail_bank_name);
+		TextView product_detail_issuer = (TextView) findViewById(R.id.product_detail_issuer);
+		RatingBar product_detail_ratingbar = (RatingBar) findViewById(R.id.product_detail_ratingbar);
+		TextView product_detail_productitem = (TextView) findViewById(R.id.product_detail_productitem);
+		ImageView product_detail_bankicon = (ImageView) findViewById(R.id.product_detail_bankicon);
+		TextView product_detail_profit = (TextView) findViewById(R.id.product_detail_profit);
+		TextView product_detail_producttype = (TextView) findViewById(R.id.product_detail_producttype);
+		TextView product_detail_startmoney = (TextView) findViewById(R.id.product_detail_startmoney);
+		TextView product_detail_period = (TextView) findViewById(R.id.product_detail_period);
+		TextView product_detail_investperiod = (TextView) findViewById(R.id.product_detail_investperiod);
 		
-
+		product_detail_issuer.setText(item_productitem.substring(0, item_productitem.indexOf("|")).trim());
+		product_detail_ratingbar.setRating(item_ratingbar);
+		product_detail_productitem.setText(item_productitem.substring(item_productitem.indexOf("|")+1).trim());
+		product_detail_profit.setText(item_profit);
+		product_detail_producttype.setText(item_productType);
+		product_detail_startmoney.setText(item_startmoney);
+		product_detail_period.setText(item_period);
+		product_detail_investperiod.setText(item_investperiod);
+		
 		// 处理图片
-		Bitmap bitmap = this.getIntent().getParcelableExtra(Constants.PRODUCT_DRAWABLE);
+		Bitmap bitmap = this.getIntent().getParcelableExtra(Constants.ITEM_BANKICON);
+		product_detail_bankicon.setImageBitmap(bitmap);
 		
-		
-		tv_product_name.setText(product_name);
-		tv_product_profit.setText(product_profit);
-		tv_product_startbuy.setText(product_startbuy);
-		product_imageview.setImageBitmap(bitmap);
-		tv_bankname.setText(bank_name);
-		
-		
-		
-		// 
-		CustomGridview grid_view = (CustomGridview) findViewById(R.id.product_detail_gridview);
-		
+		CustomGridview grid_view = (CustomGridview) findViewById(R.id.product_detail_btngroups);
 		
 		for(int i=0;i<items_fun.length;i++)
 		{
@@ -118,10 +125,7 @@ public class ProductDetailActivity extends Activity {
 				R.layout.main_items,
 				from,to);
 		
-		
 		grid_view.setAdapter(menuAdapter);
-
-		
 	}
 
 	@Override
@@ -131,4 +135,20 @@ public class ProductDetailActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public int getLayoutResourceId() {
+		return R.layout.activity_product_detail_2;
+	}
+	
+	private OnClickListener licaishiClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+				FragmentManager fm = getSupportFragmentManager();
+			  	LicaiDialogFragment dialog = LicaiDialogFragment.newInstance();
+			  	
+			  	dialog.show(fm, "fragment_edit_name");
+		}
+	};
+	
 }
