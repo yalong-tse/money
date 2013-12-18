@@ -77,7 +77,7 @@
     <color name="divider">#FFDDDDDD</color>
     
     <!-- 每日推荐 -->
-    <color name="product_section">#FF4444</color>
+    <color name="product_section">#4b8ad7</color>
     
     <!-- 金融超市 -->
     <color name="listview_item_1">#848484</color>
