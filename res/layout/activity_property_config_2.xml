@@ -1,0 +1,410 @@
+    <!-- 资产配置界面 -->
+<!-- 一定要有fillViewport=true,否则不能填满屏幕 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fadingEdge="none" >
+
+    <LinearLayout
+        android:id="@+id/product_detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+
+        <!-- start of 包住最上边的没有margin的布局 -->
+        <LinearLayout 
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:background="@color/property_config_bg1">
+        	
+        	<!-- start of 人物简介 -->
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:paddingTop="10dp"
+	            android:paddingLeft="5dp"
+	            android:paddingRight="5dp"
+	            android:paddingBottom="10dp">
+	            
+	            <!-- 头像 -->
+	        	<ImageView 
+	        	    android:id="@+id/config_invest_profile"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:src="@drawable/my_profile_2"
+	        	    android:layout_gravity="center_vertical"
+	        	    />
+	        	
+	        	<!-- start of 1 -->
+	        	<LinearLayout 
+	        	    android:layout_width="match_parent"
+	        	    android:layout_height="wrap_content"
+	        	    android:orientation="vertical"
+	        	    android:paddingLeft="10dp">
+	        	    
+	        	    <!-- start of 辛海涛先生，综合指数：75分 -->
+	        	    <RelativeLayout 
+	        	        android:layout_width="match_parent"
+	        	    	android:layout_height="wrap_content"
+	        	    	>
+	        	    	<!-- 辛海涛 -->
+	        	        <TextView 
+	        	            android:id="@+id/property_config_person_name"
+	        	            android:layout_width="wrap_content"
+	        	            android:layout_height="wrap_content"
+	        	            android:text="@string/config_username"
+	        	            android:textColor="@color/person_info_1"
+	        	            android:textSize="22sp"/>
+	        	        
+	        	        <!-- 先生 -->
+	        	        <TextView 
+	        	            android:layout_width="wrap_content"
+	        	            android:layout_height="wrap_content"
+	        	            android:layout_toRightOf="@id/property_config_person_name"
+	        	            android:layout_alignBaseline="@id/property_config_person_name"
+	        	            android:text="@string/config_username_gender"
+	        	            android:textColor="@color/person_info_2"
+	        	            android:textSize="15sp"
+	        	            android:paddingLeft="2dp"/>
+	        	        
+	        	        <!-- 综合指数 -->
+	        	        <TextView 
+	        	            android:layout_width="wrap_content"
+	        	            android:layout_height="wrap_content"
+	        	            android:layout_alignBaseline="@id/property_config_person_name"
+	        	            android:layout_toLeftOf="@+id/property_config_person_score"
+	        	            android:text="@string/config_scope_label"
+	        	            android:textColor="@color/person_info_2"
+	        	            android:textSize="12sp"
+	        	            android:paddingLeft="5dp"/>
+	        	        
+	        	        <!-- 75分 -->
+	        	        <TextView 
+	        	            android:id="@+id/property_config_person_score"
+	        	            android:layout_width="wrap_content"
+	        	            android:layout_height="wrap_content"
+	        	            android:layout_alignParentRight="true"
+	        	            android:layout_alignBaseline="@id/property_config_person_name"
+	        	            android:text="@string/config_scope_value"
+	        	            android:gravity="bottom"
+	        	            android:textColor="@color/person_info_1"
+	        	            android:textSize="22sp"
+	        	            />
+	        	        
+	        	    </RelativeLayout>
+	        	    <!-- end of 辛海涛先生，综合指数：75分 -->
+	        	    
+	        	    <!-- 来根儿横线吧,分隔第一行和第二行 -->
+	                <View 
+				        android:layout_width="fill_parent"
+				        android:layout_height="1dp"  
+				        android:background="@color/divider"/>
+	                
+	                <!-- 风险承受能力、投资偏好、财富类型 -->
+	                <LinearLayout 
+	                    android:layout_width="match_parent"
+	        	    	android:layout_height="wrap_content"
+	        	    	android:paddingTop="5dp"
+	        	    	android:orientation="horizontal">
+	        	        
+	                    <!-- start of 风险承受能力 -->
+	                    <LinearLayout 
+		                    android:layout_width="0dp"
+		                    android:layout_weight="1"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:orientation="vertical">
+		        	    	<!-- 较高 -->
+	                        <TextView 
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+			        	    	android:layout_gravity="center_horizontal"
+	                            android:text="@string/config_tolerance_grade"
+	                            android:textSize="18sp"
+	                            android:textColor="@color/person_info_1"/>
+	                        <!-- 风险承受能力 -->
+	                        <TextView 
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_gravity="center_horizontal"
+	                            android:text="@string/config_tolerance"
+	                            android:textSize="12sp"
+	                            android:textColor="@color/person_info_2"/>
+	                        
+	        	    	</LinearLayout>
+	        	    	<!-- end of 风险承受能力 -->
+	                        
+	                    <!-- 来跟竖线吧 -->
+		                <View 
+					        android:layout_width="1dp"
+					        android:layout_height="match_parent"
+					        android:layout_marginBottom="5dp"
+					        android:background="@color/divider"/>
+	                        	
+	                     <!-- start of 投资偏好 -->
+		                 <LinearLayout 
+				                android:layout_width="0dp"
+		                   		android:layout_weight="1"
+				        	    android:layout_height="wrap_content"
+				        	    android:orientation="vertical">
+				        	    <!-- 稳健性 -->
+			                    <TextView 
+			                        android:layout_width="wrap_content"
+			                        android:layout_height="wrap_content"
+					        	    android:layout_gravity="center_horizontal"
+			                        android:text="@string/config_preference_value"
+			                        android:textSize="18sp"
+			                        android:textColor="@color/person_info_1"/>
+			                    <!-- 投资偏好 -->
+			                    <TextView 
+			                        android:layout_width="wrap_content"
+			                        android:layout_height="wrap_content"
+			                        android:layout_gravity="center_horizontal"
+			                        android:text="@string/config_preference"
+			                        android:textSize="12sp"
+			                        android:textColor="@color/person_info_2"/>
+			                        
+			        	 </LinearLayout>
+			        	 <!-- end of 投资偏好 -->
+			        	 
+			             <!-- 来跟竖线吧 -->
+				         <View 
+					        android:layout_width="1dp"
+					        android:layout_height="match_parent"
+					        android:layout_marginBottom="5dp"
+					        android:background="@color/divider"/>
+		                    
+	                    <!-- start of 财富类型 -->
+	                    <LinearLayout 
+		                    android:layout_width="0dp"
+		                    android:layout_weight="1"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:orientation="vertical">
+		        	    	<!-- 低净值 -->
+	                        <TextView 
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/config_wealthtype_value"
+	                            android:layout_gravity="center_horizontal"
+	                            android:textSize="18sp"
+	                            android:textColor="@color/person_info_1"/>
+	                        <!-- 财富类型 -->
+	                        <TextView 
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_gravity="center_horizontal"
+	                            android:text="@string/config_wealthtype"
+	                            android:textSize="12sp"
+	                            android:textColor="@color/person_info_2"/>
+	                        
+	        	    	</LinearLayout>
+	        	    	<!-- end of 财富类型 -->
+	                	
+	                </LinearLayout>
+	                <!-- end of 1 -->
+	        	    
+	        	</LinearLayout>
+	        	<!-- end of 人物简介 -->
+	        	
+        	</LinearLayout>
+        	<!-- 投资者描述 -->
+        	<TextView 
+        	    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+	            android:paddingRight="5dp"
+	            android:textColor="@color/person_info_1"
+                android:text="@string/config_investor_desc_content" />
+	        
+        </LinearLayout>
+        <!-- end  of 包住最上边的没有margin的布局 -->
+        
+        <!-- start of 第二个深灰色的背景 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical"
+        	android:background="@color/property_config_bg2">
+	        
+            <LinearLayout 
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_marginTop="10dp"
+			    	android:layout_marginLeft="10dp"
+			    	android:layout_marginRight="10dp"
+			    	android:orientation="vertical"
+			    	android:background="@drawable/bg_layerlist">
+                <!-- 投资金额 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_1"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/fengxian"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_fengxian" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/fengxian"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/config_invest_money"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_1"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 投资期限 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_4"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/liudongxing"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_liudongxing" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/liudongxing"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/config_invest_period"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_2"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 开户机构 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_3"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/chanpinzhibiao"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_chanpinzhibiao" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/chanpinzhibiao"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/config_invest_bank"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_3"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+            </LinearLayout>
+            
+            <!-- 关于 -->
+            <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="10dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="10dp"
+		        android:paddingTop="5dp"
+		        android:background="@drawable/bg_layerlist"
+		    	android:clickable="true" >
+		        
+		        <ImageView 
+			            android:id="@+id/chanpinzhibiao"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_chanpinzhibiao" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/chanpinzhibiao"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/config_invest_advise"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_3"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+		        
+		        </RelativeLayout>
+            
+	    </LinearLayout>
+	    <!-- end of 第二个深灰色的背景 -->
+        
+    </LinearLayout>
+
+</ScrollView>

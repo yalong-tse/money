@@ -1,10 +1,15 @@
 package com.rolling.money;
 
+import com.rolling.money.utils.ImageHelper;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 // http://stackoverflow.com/questions/18451575/action-bar-fragment-activity
@@ -25,7 +30,14 @@ public class PropertyConfigActivity extends BaseBarActivity {
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("×Ê²úÅäÖÃ");
 		
-		TextView contactme = (TextView)findViewById(R.id.config_consultant_contactme);
+		ImageView iv1 = (ImageView)findViewById(R.id.config_invest_profile);
+		
+		Bitmap bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.my_profile_2);
+		bmp = ImageHelper.getRoundedCornerBitmap(bmp, 10);
+		
+		iv1.setImageBitmap(bmp);
+		
+		/*TextView contactme = (TextView)findViewById(R.id.config_consultant_contactme);
 		
 		contactme.setOnClickListener(new OnClickListener() {
 			@Override
@@ -39,7 +51,7 @@ public class PropertyConfigActivity extends BaseBarActivity {
 			  	
 			  	dialog.show(fm, "fragment_edit_name");
 			}
-		});
+		});*/
 		
 	}
 
@@ -52,7 +64,7 @@ public class PropertyConfigActivity extends BaseBarActivity {
 
 	@Override
 	public int getLayoutResourceId() {
-		return R.layout.activity_property_config;
+		return R.layout.activity_property_config_2;
 	}
 
 }

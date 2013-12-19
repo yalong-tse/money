@@ -75,6 +75,12 @@
     <color name="listview_border">#BDBBB7</color>
     <color name="layout_bg_pressed">#FF8800</color>
     <color name="divider">#FFDDDDDD</color>
+    <color name="person_info_1">#464646</color>
+    <color name="person_info_2">#a3a3a3</color>
+    <color name="person_info_3">#525252</color>
+    <color name="person_info_4">#a2a2a2</color>
+    <color name="property_config_bg1">#F7F7F7</color>
+    <color name="property_config_bg2">#E5E5E5</color>
     
     <!-- 每日推荐 -->
     <color name="product_section">#4b8ad7</color>
