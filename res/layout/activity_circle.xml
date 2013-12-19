@@ -6,8 +6,5 @@
     tools:context=".CircleActivity" >
 
     <!--  理财圈 -->
-    <include
-        android:id="@+id/title_bar"
-        layout="@layout/title" />
 
 </RelativeLayout>

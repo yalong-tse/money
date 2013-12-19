@@ -212,12 +212,13 @@
         	</LinearLayout>
         	<!-- 投资者描述 -->
         	<TextView 
+        	    android:id="@+id/config_description"
         	    android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
 	            android:paddingRight="5dp"
 	            android:textColor="@color/person_info_1"
-                android:text="@string/config_investor_desc_content" />
+                 />
 	        
         </LinearLayout>
         <!-- end  of 包住最上边的没有margin的布局 -->
