@@ -21,6 +21,7 @@
         android:layout_below="@id/topmenu"
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"
+        android:scrollbars="none"
         />
     
 </RelativeLayout>
