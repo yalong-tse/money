@@ -27,6 +27,7 @@
         </activity>
         <activity
             android:name="com.rolling.money.LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:label="@string/title_activity_login" >
         </activity>
         <activity
@@ -36,6 +37,7 @@
         <activity
             android:name="com.rolling.money.SplashScreenActivity"
             android:label="@string/title_activity_splash_screen"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
