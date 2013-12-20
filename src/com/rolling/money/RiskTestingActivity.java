@@ -129,7 +129,7 @@ public class RiskTestingActivity extends BaseBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.risk_testing, menu);
+//		getMenuInflater().inflate(R.menu.risk_testing, menu);
 		return true;
 	}
 
