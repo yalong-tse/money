@@ -37,33 +37,33 @@ public class RiskTestFragment1 extends Fragment {
 		this.spinner_house = (Spinner) view.findViewById(R.id.risktesting_house);
 		
 		// age
-		ArrayAdapter<String> age_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,age_arr);
-		age_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> age_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,age_arr);
+		age_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_age.setAdapter(age_adapter);
 				
 		// job
-		ArrayAdapter<String> job_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,job_arr);
-		job_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> job_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,job_arr);
+		job_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_job.setAdapter(job_adapter);
 				
 		// knowledge
-		ArrayAdapter<String> know_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,know_arr);
-		know_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> know_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,know_arr);
+		know_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_knowledge.setAdapter(know_adapter);
 				
 		//family
-		ArrayAdapter<String> family_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,family_arr);
-		family_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> family_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,family_arr);
+		family_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_family.setAdapter(family_adapter);
 				
 		//house
-		ArrayAdapter<String> house_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,house_arr);
-		house_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> house_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,house_arr);
+		house_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_house.setAdapter(house_adapter);
 				
 		//experience
-		ArrayAdapter<String> experience_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,experience_arr);
-		experience_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> experience_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,experience_arr);
+		experience_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_experience.setAdapter(experience_adapter);
 				
 		return view;

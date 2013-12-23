@@ -37,33 +37,33 @@ public class RiskTestFragment2 extends Fragment {
 		this.spinner_tolerance = (Spinner) view.findViewById(R.id.risktesting_tolerance);
 		
 		//tolerance
-		ArrayAdapter<String> tolerance_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item,tolerance_arr);
-		tolerance_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> tolerance_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), R.drawable.drop_list_hover,tolerance_arr);
+		tolerance_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_tolerance.setAdapter(tolerance_adapter);
 				
 		// firstfactor
-		ArrayAdapter<String> firstfactor_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,firstfactor_arr);
-		firstfactor_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> firstfactor_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,firstfactor_arr);
+		firstfactor_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_firstfactor.setAdapter(firstfactor_adapter);
 				
 		//archivement
-		ArrayAdapter<String> archivement_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,archivement_arr);
-		archivement_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> archivement_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,archivement_arr);
+		archivement_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_archivement.setAdapter(archivement_adapter);
 				
 		//mentalstate
-		ArrayAdapter<String> mentalstate_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,mental_arr);
-		mentalstate_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> mentalstate_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,mental_arr);
+		mentalstate_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_mentalstate.setAdapter(mentalstate_adapter);
 				
 		// maininvest
-		ArrayAdapter<String> maininvest_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,maininvest_arr);
-		maininvest_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> maininvest_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,maininvest_arr);
+		maininvest_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_maininvest.setAdapter(maininvest_adapter);
 				
 		// refuseinvest
-		ArrayAdapter<String> refuseinvest_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),android.R.layout.simple_spinner_item,refusetools_arr);
-		refuseinvest_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<String> refuseinvest_adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.drawable.drop_list_hover,refusetools_arr);
+		refuseinvest_adapter.setDropDownViewResource(R.drawable.custom_spinner);
 		spinner_refuse_investtools.setAdapter(refuseinvest_adapter);
 		
 		return view;
