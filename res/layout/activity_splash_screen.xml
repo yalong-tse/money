@@ -47,7 +47,7 @@
                 android:layout_marginRight="8dp"
                 android:text="@string/welcome_btn"
                 android:textColor="@color/black_25"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
     </com.rolling.money.utils.CustomScrollLayout>
 
