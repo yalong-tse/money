@@ -17,6 +17,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class SplashScreenActivity extends Activity implements OnViewChangeListener{
 
@@ -24,7 +25,7 @@ public class SplashScreenActivity extends Activity implements OnViewChangeListen
 	
 	private CustomScrollLayout mScrollLayout;
 	private LinearLayout pointLLayout;
-	private Button startBtn;
+	private TextView startBtn;
 	private ImageView[] imgs;
 	private int count;
 	private int currentItem;
@@ -61,7 +62,7 @@ public class SplashScreenActivity extends Activity implements OnViewChangeListen
 	{
 		this.mScrollLayout = (CustomScrollLayout) findViewById(R.id.splash_ScrollLayout);
 		this.pointLLayout = (LinearLayout) findViewById(R.id.splash_linelayout);
-		this.startBtn = (Button) findViewById(R.id.splash_startBtn);
+		this.startBtn = (TextView) findViewById(R.id.splash_startBtn);
 		count = mScrollLayout.getChildCount();
 		imgs = new ImageView[count];
 		for(int i = 0; i< count;i++) {
