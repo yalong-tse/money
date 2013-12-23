@@ -59,7 +59,8 @@
         </activity>
         <activity
             android:name="com.rolling.money.RiskTestingActivity"
-            android:label="@string/title_activity_risk_testing" >
+            android:label="@string/title_activity_risk_testing"
+            android:theme="@style/StyledIndicators" >
         </activity>
         <activity
             android:name="com.rolling.money.ProductDetailActivity"

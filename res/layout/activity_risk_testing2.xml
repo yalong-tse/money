@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiskTestingActivity" >
+
+    <com.viewpagerindicator.TabPageIndicator 
+        android:id="@+id/titles"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"/>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titles"
+        android:layout_above="@+id/btn_starttest"
+        />
+    <LinearLayout
+        android:id="@+id/btn_starttest"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_clickable_bg_4"
+		android:clickable="true"
+        >
+ 		
+        <TextView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="开始测试"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="#FF0000"/>
+        
+    </LinearLayout>
+    
+</RelativeLayout>
