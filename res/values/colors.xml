@@ -91,4 +91,7 @@
     <color name="listview_item_bottom_right">#3988e5</color>
     <color name="product_detail_red">#ef0000</color>
     <color name="product_detail_gray">#9e9e9e</color>
+    
+    <!-- 产品解读 -->
+    <color name="radar_bg">#FFFFCC</color>
 </resources>

@@ -27,8 +27,8 @@
         </activity>
         <activity
             android:name="com.rolling.money.LoginActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.rolling.money.ListProductActivity"
@@ -37,8 +37,8 @@
         <activity
             android:name="com.rolling.money.SplashScreenActivity"
             android:label="@string/title_activity_splash_screen"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -97,6 +97,10 @@
         <activity
             android:name="com.rolling.money.CollectionActivity"
             android:label="@string/title_activity_collection" >
+        </activity>
+        <activity
+            android:name="com.rolling.money.ProductAnalyseActivity"
+            android:label="@string/title_activity_product_analyse" >
         </activity>
     </application>
 

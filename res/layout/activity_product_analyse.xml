@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:money="http://schemas.android.com/apk/res/com.rolling.money"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    android:orientation="vertical"
+    >
+
+    <!-- 产品解读 -->
+
+    <com.rolling.money.ui.RadarView
+        android:id="@+id/radar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/property_config_bg1" 
+        money:key_array="@array/radar_array_key"
+        money:value_array="@array/radar_array_value"/>
+
+    <LinearLayout 
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_marginTop="10dp"
+			    	android:layout_marginLeft="10dp"
+			    	android:layout_marginRight="10dp"
+			    	android:orientation="vertical"
+			    	android:background="@drawable/bg_layerlist">
+                <!-- 适用： 激进型 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_1"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/fengxian"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_fengxian" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/fengxian"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="适用"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <TextView
+			            android:id="@+id/product_detail_investperiod"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_toLeftOf="@+id/arrow3_1"
+			            android:text="激进型"
+			            android:textColor="@color/product_detail_red" />
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_1"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 属性：短期高收益 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_4"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/liudongxing"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_liudongxing" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/liudongxing"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="属性"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <TextView
+			            android:id="@+id/product_detail_investperiod"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_toLeftOf="@+id/arrow3_2"
+			            android:text="短期高收益"
+			            android:textColor="@color/product_detail_red" />
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_2"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dp"  
+			        android:background="@color/divider"/>
+			    
+			    <!-- 建议指数：4星 -->
+			    <RelativeLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="10dp"
+			        android:paddingTop="5dp"
+			        android:background="@drawable/layout_clickable_bg_3"
+			    	android:clickable="true" >
+                    
+			        <ImageView 
+			            android:id="@+id/chanpinzhibiao"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:src="@drawable/product_detail_chanpinzhibiao" />
+			        
+			        <TextView 
+			            android:layout_toRightOf="@id/chanpinzhibiao"
+			            android:paddingLeft="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="建议指数"
+			            android:layout_centerVertical="true"
+			            android:textSize="20sp"
+			            android:textColor="@android:color/black"/>
+			        
+			        <RatingBar
+			            android:layout_toLeftOf="@+id/arrow3_3"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:numStars="4"
+	                    android:rating="4"
+	                    android:layout_marginLeft="5dp"
+	                    android:isIndicator="true"
+	                    android:layout_centerVertical="true"
+	        			style="@style/myRatingBar2"/>
+			        
+			        <ImageView 
+			            android:id="@+id/arrow3_3"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginRight="5dp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:src="@drawable/ic_arrow" />
+			        
+			    </RelativeLayout>
+			    
+            </LinearLayout>
+    
+    	<TextView 
+    	    android:id="@+id/product_description"
+        	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:textColor="@color/person_info_1"
+            />
+
+</LinearLayout>

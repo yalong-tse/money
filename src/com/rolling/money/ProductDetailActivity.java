@@ -3,6 +3,7 @@ package com.rolling.money;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.ScrollView;
@@ -126,6 +129,43 @@ public class ProductDetailActivity extends BaseBarActivity {
 				from,to);
 		
 		grid_view.setAdapter(menuAdapter);
+		
+		grid_view.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				switch(position) {
+				// 加入收藏
+				case 0:
+					break;
+				// 预约购买
+				case 1:
+					break;
+				// 网点查询
+				case 2:
+					break;
+				// 产品解读
+				case 3:
+					Intent intent = new Intent(ProductDetailActivity.this, ProductAnalyseActivity.class);
+					startActivity(intent);
+					break;
+				// 关联产品
+				case 4:
+					break;
+				// 同行产品
+				case 5:
+					break;
+				// 用户评论
+				case 6:
+					break;
+				// 理财计算器
+				case 7:
+					break;
+				}
+			}
+			
+		});
 	}
 
 	@Override

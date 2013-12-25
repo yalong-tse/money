@@ -241,5 +241,24 @@
     <string name="contackmanager">联系理财经理</string>
     <string name="title_activity_dialog">DialogActivity</string>
     <string name="title_activity_collection">CollectionActivity</string>
+    <string name="title_activity_product_analyse">ProductAnalyseActivity</string>
+    
+    <!-- 产品解读 -->
+    <string-array name="radar_array_key">
+        <item>指标1</item>
+        <item>指标2</item>
+        <item>指标3</item>
+        <item>指标4</item>
+        <item>指标5</item>
+        <item>指标6</item>
+    </string-array>
+    <string-array name="radar_array_value">
+        <item>6</item>
+        <item>8</item>
+        <item>4</item>
+        <item>6</item>
+        <item>5</item>
+        <item>7</item>
+    </string-array>
 
 </resources>
