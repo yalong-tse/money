@@ -260,5 +260,8 @@
         <item>5</item>
         <item>7</item>
     </string-array>
+    
+    <!-- 风险评估 -->
+    <string name="risktest">客户风险评价</string>
 
 </resources>
