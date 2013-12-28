@@ -40,7 +40,7 @@
             <TextView 
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="王经理，私人金融顾问"
+                android:text="@string/investadvise_licaishi"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"/>
@@ -48,7 +48,7 @@
             <TextView 
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="智通财富认证投资理财师"
+                android:text="@string/investadvise_licaishi_2"
                 android:textSize="13sp"
                 android:textColor="@color/person_info_1"
                 />
@@ -61,6 +61,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="联系Ta"
+            android:textSize="16sp"
+            android:gravity="center"
+	        android:textColor="@android:color/white"
+	        android:background="@drawable/btn_dialog_blue"
+	        android:padding="10dp"
             />
     </RelativeLayout>
     

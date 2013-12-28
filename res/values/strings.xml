@@ -264,5 +264,8 @@
     <!-- 风险评估 -->
     <string name="risktest">客户风险评价</string>
     <string name="title_activity_invest_advise">InvestAdviseActivity</string>
-
+    
+    <!-- 投资建议 -->
+	<string name="investadvise_licaishi">李经理，私人金融顾问</string>
+	<string name="investadvise_licaishi_2">智通财富认证投资理财师</string>
 </resources>
