@@ -364,8 +364,9 @@
 			    
             </LinearLayout>
             
-            <!-- 关于 -->
+            <!-- 投资建议 -->
             <RelativeLayout
+                android:id="@+id/property_config_investadvise"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_margin="10dp"

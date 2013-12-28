@@ -102,6 +102,10 @@
             android:name="com.rolling.money.ProductAnalyseActivity"
             android:label="@string/title_activity_product_analyse" >
         </activity>
+        <activity
+            android:name="com.rolling.money.InvestAdviseActivity"
+            android:label="@string/title_activity_invest_advise" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />

@@ -242,7 +242,7 @@
     <string name="title_activity_dialog">DialogActivity</string>
     <string name="title_activity_collection">CollectionActivity</string>
     <string name="title_activity_product_analyse">ProductAnalyseActivity</string>
-    
+
     <!-- 产品解读 -->
     <string-array name="radar_array_key">
         <item>指标1</item>
@@ -260,8 +260,9 @@
         <item>5</item>
         <item>7</item>
     </string-array>
-    
+
     <!-- 风险评估 -->
     <string name="risktest">客户风险评价</string>
+    <string name="title_activity_invest_advise">InvestAdviseActivity</string>
 
 </resources>

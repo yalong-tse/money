@@ -1,17 +1,18 @@
 package com.rolling.money;
 
-import com.rolling.money.utils.ImageHelper;
-
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.text.Html;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.rolling.money.utils.ImageHelper;
 
 // http://stackoverflow.com/questions/18451575/action-bar-fragment-activity
 // Extend Activity classes from ActionBarCompat: ActionBarCompat contains one Activity class 
@@ -43,6 +44,9 @@ public class PropertyConfigActivity extends BaseBarActivity {
 		String next = "青年男士，事业有成家庭幸福，有房有车，收入稳定，无房贷压力，可用于投资的财富相对宽松，有一定投资经验。专家建议可选用银行理财产品，基金类产品进行周期性投资实现长期财富增值。";
 		config_description.setText(Html.fromHtml(first + next));
 		
+		RelativeLayout investadvise = (RelativeLayout) findViewById(R.id.property_config_investadvise);
+		investadvise.setOnClickListener(investadviseListener);
+		
 		
 		/*TextView contactme = (TextView)findViewById(R.id.config_consultant_contactme);
 		
@@ -61,6 +65,15 @@ public class PropertyConfigActivity extends BaseBarActivity {
 		});*/
 		
 	}
+	
+	private OnClickListener investadviseListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			Intent intent = new Intent(PropertyConfigActivity.this, InvestAdviseActivity.class);
+			startActivity(intent);
+		}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
