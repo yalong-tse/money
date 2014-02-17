@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:money="http://schemas.android.com/apk/res/com.rolling.money"
+    xmlns:money="http://schemas.android.com/apk/res/com.rollinggrid.money"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/android_layout_bg"
@@ -8,7 +8,7 @@
 
     <!-- 产品解读 -->
 
-    <com.rolling.money.ui.RadarView
+    <com.rollinggrid.money.ui.RadarView
         android:id="@+id/radar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

@@ -6,7 +6,7 @@
 
     <!-- 启动时候的导航界面，方便导航图片轮换 -->
 
-    <com.rolling.money.utils.CustomScrollLayout
+    <com.rollinggrid.money.utils.CustomScrollLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/splash_ScrollLayout"
         android:layout_width="fill_parent"
@@ -49,7 +49,7 @@
                 android:textColor="@color/black_25"
                 android:textSize="20sp" />
         </RelativeLayout>
-    </com.rolling.money.utils.CustomScrollLayout>
+    </com.rollinggrid.money.utils.CustomScrollLayout>
 
     <LinearLayout
         android:id="@+id/splash_linelayout"

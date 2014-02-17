@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rolling.money"
+    package="com.rollinggrid.money"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -16,26 +16,26 @@
         android:targetSdkVersion="14" />
 
     <application
-        android:name="com.rolling.money.MyApplication"
+        android:name="com.rollinggrid.money.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/logo_qgfan"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         <activity
-            android:name="com.rolling.money.MainActivity"
+            android:name="com.rollinggrid.money.MainActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.rolling.money.LoginActivity"
+            android:name="com.rollinggrid.money.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.rolling.money.ListProductActivity"
+            android:name="com.rollinggrid.money.ListProductActivity"
             android:label="@string/title_activity_list_product" >
         </activity>
         <activity
-            android:name="com.rolling.money.SplashScreenActivity"
+            android:name="com.rollinggrid.money.SplashScreenActivity"
             android:label="@string/title_activity_splash_screen"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
@@ -46,64 +46,64 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rolling.money.PersonInfoActivity"
+            android:name="com.rollinggrid.money.PersonInfoActivity"
             android:label="@string/title_activity_person_info" >
         </activity>
         <activity
-            android:name="com.rolling.money.CalculatorActivity"
+            android:name="com.rollinggrid.money.CalculatorActivity"
             android:label="@string/title_activity_calculator" >
         </activity>
         <activity
-            android:name="com.rolling.money.PropertyActivity"
+            android:name="com.rollinggrid.money.PropertyActivity"
             android:label="@string/title_activity_property" >
         </activity>
         <activity
-            android:name="com.rolling.money.RiskTestingActivity"
+            android:name="com.rollinggrid.money.RiskTestingActivity"
             android:label="@string/title_activity_risk_testing"
             android:theme="@style/StyledIndicators" >
         </activity>
         <activity
-            android:name="com.rolling.money.ProductDetailActivity"
+            android:name="com.rollinggrid.money.ProductDetailActivity"
             android:label="@string/title_activity_product_detail" >
         </activity>
         <activity
-            android:name="com.rolling.money.MapActivity"
+            android:name="com.rollinggrid.money.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
         <activity
-            android:name="com.rolling.money.MapviewActivity"
+            android:name="com.rollinggrid.money.MapviewActivity"
             android:label="@string/title_activity_mapview" >
         </activity>
         <activity
-            android:name="com.rolling.money.PropertyConfigActivity"
+            android:name="com.rollinggrid.money.PropertyConfigActivity"
             android:label="@string/title_activity_property_config" >
         </activity>
         <activity
-            android:name="com.rolling.money.CircleActivity"
+            android:name="com.rollinggrid.money.CircleActivity"
             android:label="@string/title_activity_circle" >
         </activity>
         <activity
-            android:name="com.rolling.money.RecommendActivity"
+            android:name="com.rollinggrid.money.RecommendActivity"
             android:label="@string/title_activity_recommend" >
         </activity>
         <activity
-            android:name="com.rolling.money.CalActivity"
+            android:name="com.rollinggrid.money.CalActivity"
             android:label="@string/title_activity_cal" >
         </activity>
         <activity
-            android:name="com.rolling.money.NewsActivity"
+            android:name="com.rollinggrid.money.NewsActivity"
             android:label="@string/title_activity_news" >
         </activity>
         <activity
-            android:name="com.rolling.money.CollectionActivity"
+            android:name="com.rollinggrid.money.CollectionActivity"
             android:label="@string/title_activity_collection" >
         </activity>
         <activity
-            android:name="com.rolling.money.ProductAnalyseActivity"
+            android:name="com.rollinggrid.money.ProductAnalyseActivity"
             android:label="@string/title_activity_product_analyse" >
         </activity>
         <activity
-            android:name="com.rolling.money.InvestAdviseActivity"
+            android:name="com.rollinggrid.money.InvestAdviseActivity"
             android:label="@string/title_activity_invest_advise" >
         </activity>
     </application>
