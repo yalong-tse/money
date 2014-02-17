@@ -1,38 +1,97 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res/com.rolling.money"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-   android:orientation="vertical"
-   android:background="@drawable/android_layout_bg"
-    tools:context=".MainActivity" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:background="@drawable/bg">
+
+    <include android:id="@+id/bottommenu" layout="@layout/common_bottommenu" />
     
-    <!-- 顶部标题, 使用custom actionbar替换 -->
-	<!-- <include android:id="@+id/title_bar" layout="@layout/title" /> -->
-	<!-- 底部菜单 -->
-	<include android:id="@+id/bottommenu" layout="@layout/common_bottommenu" />
-	
-    <LinearLayout android:orientation="vertical" 
-        android:gravity="center"
-        android:layout_above="@id/bottommenu"
+    <TextView android:id="@+id/logo"
+        android:text="@string/logo"
+        android:textSize="35sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#0B4AA8"
+        android:gravity="center"/>
+    
+    <TextView android:id="@+id/logo_sub"
+        android:text="@string/logo_sub"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/logo"
+        android:gravity="center"/>
+    
+    <com.rolling.money.ui.CircleLayout
+        android:id="@+id/main_circle_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-        
-        <GridView android:id="@+id/main_gridview"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:verticalSpacing="10dp"
-            android:horizontalSpacing="10dp"
-            android:stretchMode="columnWidth"
-            android:cacheColorHint="#00000000"
-        	android:scrollbars="none"
-            android:numColumns="4">
-            
-        </GridView>
-        
-    </LinearLayout>
-    
+        android:layout_above="@+id/main_selected_textView"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="100dp"
+        circle:firstChildPosition="South" 
+        circle:rotateToCenter="true" 
+        circle:isRotating="true"
+        circle:speed="75">
+<!--         circle:circleBackground="@drawable/green"  > -->
+
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_facebook_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_facebook"
+            circle:name="@string/facebook" />
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_myspace_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_myspace"
+            circle:name="@string/myspace" />
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_google_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_google"
+            circle:name="@string/google" />
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_linkedin_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linkedin"
+            circle:name="@string/linkedin" />
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_twitter_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_twitter"
+            circle:name="@string/twitter" />
+
+        <com.rolling.money.ui.CircleImageView
+            android:id="@+id/main_wordpress_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_wordpress"
+            circle:name="@string/wordpress" />
+    </com.rolling.money.ui.CircleLayout>
+
+    <TextView
+        android:id="@+id/main_selected_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottommenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     
 </RelativeLayout>

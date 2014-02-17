@@ -137,10 +137,10 @@
     <string name="new_g_abstract">华商基金-进可攻退可守的基金</string>
 
     <!-- 底部公共菜单模块 -->
-    <string name="menu_bottom_1">财务分析</string>
+    <string name="menu_bottom_1">每日推荐</string>
     <string name="menu_bottom_2">资产配置</string>
     <string name="menu_bottom_3">金融超市</string>
-    <string name="menu_bottom_4">理财圈子</string>
+    <string name="menu_bottom_4">我的收藏</string>
     <string name="menu_more">菜单4</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
 
@@ -268,4 +268,17 @@
     <!-- 投资建议 -->
 	<string name="investadvise_licaishi">李经理，私人金融顾问</string>
 	<string name="investadvise_licaishi_2">智通财富认证投资理财师</string>
+	
+	<!-- 新首页暂时使用 -->
+	<string name="facebook">个人设置</string>
+    <string name="twitter">我的资产</string>
+    <string name="google">风险评估</string>
+    <string name="linkedin">资产配置</string>
+    <string name="wordpress">金融超市</string>
+    <string name="myspace">理财资讯</string>
+    <string name="logo">钱滚翻</string>
+    <string name="logo_sub">循环投资理财专家</string>
+    <string name="start_app">Starting application:</string>
+    <string name="center_click">Center has been clicked</string>
+    
 </resources>

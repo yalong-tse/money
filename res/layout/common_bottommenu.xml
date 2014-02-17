@@ -8,8 +8,8 @@
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:baselineAligned="false">
 		
-	    <!-- menu1:财务分析 -->
-		<LinearLayout android:orientation="vertical" android:id="@+id/menu_home"
+	    <!-- menu1:每日推荐 -->
+		<LinearLayout android:orientation="vertical" android:id="@+id/bottom_menu1"
 			android:layout_width="0dip" android:layout_weight="0.20"
 			android:layout_height="wrap_content" android:clickable="true"
 			android:background="@drawable/bottom_bar">
@@ -26,7 +26,7 @@
 		</LinearLayout>
 		
 		<!-- menu2:资产配置 -->
-		<LinearLayout android:orientation="vertical" android:id="@+id/menu_brand"
+		<LinearLayout android:orientation="vertical" android:id="@+id/bottom_menu2"
 			android:background="@drawable/bottom_bar" android:layout_width="0dip"
 			android:layout_weight="0.20" android:layout_height="wrap_content"
 			android:clickable="true">
@@ -45,7 +45,7 @@
 		
 		<!-- menu3:金融超市 -->
 		<LinearLayout android:orientation="vertical"
-			android:id="@+id/menu_shopping_cart" android:background="@drawable/bottom_bar"
+			android:id="@+id/bottom_menu3" android:background="@drawable/bottom_bar"
 			android:layout_width="0dip" android:layout_weight="0.20"
 			android:layout_height="wrap_content" android:clickable="true">
 			
@@ -60,8 +60,8 @@
 				
 		</LinearLayout>
 		
-		<!-- menu4:理财圈子 -->
-		<LinearLayout android:orientation="vertical" android:id="@+id/menu_my_letao"
+		<!-- menu4: 我的收藏 -->
+		<LinearLayout android:orientation="vertical" android:id="@+id/bottom_menu4"
 			android:background="@drawable/bottom_bar" android:layout_width="0dip"
 			android:layout_weight="0.20" android:layout_height="wrap_content"
 			android:clickable="true">

@@ -144,6 +144,9 @@ public class ProductDetailActivity extends BaseBarActivity {
 					break;
 				// 网点查询
 				case 2:
+					Intent intent_map = new Intent();
+					intent_map.setClass(ProductDetailActivity.this, MapviewActivity.class);
+					startActivity(intent_map);
 					break;
 				// 产品解读
 				case 3:
@@ -161,6 +164,9 @@ public class ProductDetailActivity extends BaseBarActivity {
 					break;
 				// 理财计算器
 				case 7:
+					Intent intent_cal = new Intent();
+					intent_cal.setClass(ProductDetailActivity.this, CalActivity.class);
+					startActivity(intent_cal);
 					break;
 				}
 			}
