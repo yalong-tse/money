@@ -62,7 +62,7 @@ public class ListProductActivity extends BaseBarActivity {
 		initListProductActionBar();
 		
 		List<IProduct> data = new ArrayList<IProduct>();
-		data.add(new ProductEntry2(5F,"3.5", "2013/7/10~2013/7/30", "12个月","预售", "3万", R.drawable.guangdayinhang,"光大银行 | 乾元—尊享型2013年第12期理财产品(55天)", "保本浮动收益" , "25人关注"));
+		data.add(new ProductEntry2(5F,"3.5", "2013/7/2~2014/7/1", "12个月","预售", "3万", R.drawable.guangdayinhang,"光大银行 | 乾元—尊享型2013年第12期理财产品(55天)", "保本浮动收益" , "25人关注"));
 		data.add(new ProductEntry2(4.5F,"3.5", "2013/6/24~2013/7/5", "24天","预售", "5万", R.drawable.zhaoshangyinhang, "招商银行 | 中银稳富ZYWFSH042013097(170天)人民币理财计划", "非保本浮动收益", "25人关注"));
 		data.add(new ProductEntry2(5F,"6", "2013/9/24~2013/10/5", "11天","预售", "10万", R.drawable.jiaotongyinhang, "交通银行 | 高净值客户专属240天增利人民币理财产品(ZL240D02)", "非保本浮动收益", "300人关注"));
 		data.add(new ProductEntry2(5F,"4.5", "2013/6/24~2013/7/5", "24个月","预售", "5万", R.drawable.gongshangyinhang, "工商银行 | 招银进宝之鼎鼎成金10015号理财计划(90天)", "保本浮动收益",  "30人关注"));

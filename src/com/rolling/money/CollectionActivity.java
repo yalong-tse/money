@@ -34,13 +34,13 @@ public class CollectionActivity extends BaseBarActivity {
 		
 		List<IProduct> data = new ArrayList<IProduct>();
 		data.add(new ProductSection("银行理财产品"));
-		data.add(new ProductEntry2(5F,"3.5", "2013/7/10~2013/7/30", "12个月","预售", "3万", R.drawable.guangdayinhang,"光大银行 | 乾元—尊享型2013年第12期理财产品(55天)", "保本浮动收益" , "25人关注"));
+		data.add(new ProductEntry2(5F,"3.5", "2013/7/2~2014/7/1", "12个月","预售", "3万", R.drawable.guangdayinhang,"光大银行 | 乾元—尊享型2013年第12期理财产品(55天)", "保本浮动收益" , "25人关注"));
 		
 		data.add(new ProductSection("银行资产管理类产品"));
 		data.add(new ProductEntry2(5F, "5", "2013/9/8~2013/9/20", "65天", "预售","10万",R.drawable.guangdayinhang, "光大银行 | 颐享阳光A", "保本浮动收益", "78人关注"));
 		
 		data.add(new ProductSection("信托类产品"));
-		data.add(new ProductEntry2(3.5F, "11.2", "2013/9/8~2013/10/9", "12个月", "预售", "100万", R.drawable.fangzhengxintuo, "方正信托 | 华门控股集合资金信托产品", "非保本浮动收益", "5人关注"));
+		data.add(new ProductEntry2(3.5F, "8.2", "2013/8/8~2013/9/9", "6个月", "预售", "100万", R.drawable.fangzhengxintuo, "方正信托 | 华门控股集合资金信托产品", "非保本浮动收益", "5人关注"));
 		
 		TextView textView = (TextView)findViewById(R.id.title);
 		textView.setText("我的收藏");
